@@ -1,0 +1,17 @@
+# Archivos de compilación y binarios
+bin/
+obj/
+.vs/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+*.log
+*.bak
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.json
+secrets.json
