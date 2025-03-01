@@ -1,4 +1,6 @@
-@Restaurants.API_HostAddress = http://localhost:5065
+@host = http://localhost
+@port = 5065
+@Restaurants.API_HostAddress = {{host}}:{{port}}
 
 GET {{Restaurants.API_HostAddress}}/weatherforecast/
 Accept: application/json
