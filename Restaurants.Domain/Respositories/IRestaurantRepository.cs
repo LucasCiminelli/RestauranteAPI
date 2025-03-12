@@ -12,7 +12,7 @@ namespace Restaurants.Domain.Respositories
 
         Task<IEnumerable<Restaurant>> GetAllAsync();
         Task<Restaurant> GetByIdAsync(int id);
-
+        Task<int> CreateAsync(Restaurant entity);
 
     }
 }

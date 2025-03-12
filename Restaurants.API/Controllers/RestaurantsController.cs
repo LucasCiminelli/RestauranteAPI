@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Restaurants;
+using Restaurants.Application.Restaurants.Dtos;
 using System.Threading.Tasks;
 
 namespace Restaurants.API.Controllers
@@ -41,6 +42,15 @@ namespace Restaurants.API.Controllers
                 return NotFound();
             }
 
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantDTO request)
+        {
+            int id = await _restaurantService.Create(request);
+
+            return CreatedAtAction(nameof(GetById), new { id }, null);
         }
 
     }
