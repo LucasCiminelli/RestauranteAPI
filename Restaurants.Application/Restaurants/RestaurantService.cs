@@ -25,36 +25,36 @@ namespace Restaurants.Application.Restaurants
             _mapper = mapper;
         }
 
-        public async Task<int> Create(CreateRestaurantDTO restaurantDto)
-        {
-            _logger.LogInformation("Creating a new Restaurant");
+        //public async Task<int> Create(CreateRestaurantDTO restaurantDto)
+        //{
+        //    _logger.LogInformation("Creating a new Restaurant");
 
-            var restaurant = _mapper.Map<Restaurant>(restaurantDto);
+        //    var restaurant = _mapper.Map<Restaurant>(restaurantDto);
 
-            int id = await _restaurantRepository.CreateAsync(restaurant);
+        //    int id = await _restaurantRepository.CreateAsync(restaurant);
 
-            return id;
-        }
+        //    return id;
+        //}
 
-        public async Task<IEnumerable<RestaurantDTO>> GetAllRestaurants()
-        {
-            _logger.LogInformation("Getting all Restaurants");
+        //public async Task<IEnumerable<RestaurantDTO>> GetAllRestaurants()
+        //{
+        //    _logger.LogInformation("Getting all Restaurants");
 
-            var restaurants = await _restaurantRepository.GetAllAsync();
+        //    var restaurants = await _restaurantRepository.GetAllAsync();
 
-            var restaurantsDto = _mapper.Map<IEnumerable<RestaurantDTO>>(restaurants);
+        //    var restaurantsDto = _mapper.Map<IEnumerable<RestaurantDTO>>(restaurants);
 
-            return restaurantsDto;
-        }
+        //    return restaurantsDto;
+        //}
 
-        public async Task<RestaurantDTO> GetById(int id)
-        {
-            _logger.LogInformation($"Getting restaurant {id}");
-            var restaurant = await _restaurantRepository.GetByIdAsync(id);
+        //public async Task<RestaurantDTO> GetById(int id)
+        //{
+        //    _logger.LogInformation($"Getting restaurant {id}");
+        //    var restaurant = await _restaurantRepository.GetByIdAsync(id);
 
-            var restaurantDto = _mapper.Map<RestaurantDTO>(restaurant);
+        //    var restaurantDto = _mapper.Map<RestaurantDTO>(restaurant);
 
-            return restaurantDto;
-        }
+        //    return restaurantDto;
+        //}
     }
 }

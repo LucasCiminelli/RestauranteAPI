@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Restaurants;
+using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
 using Restaurants.Application.Restaurants.Dtos;
+using Restaurants.Application.Restaurants.Queries.GetAllRestaurants;
+using Restaurants.Application.Restaurants.Queries.GetRestaurantById;
 using System.Threading.Tasks;
 
 namespace Restaurants.API.Controllers
@@ -9,17 +13,18 @@ namespace Restaurants.API.Controllers
     [Route("api/[controller]")]
     public class RestaurantsController : ControllerBase
     {
-        private readonly IRestaurantService _restaurantService;
+        private readonly IMediator _mediator;
 
-        public RestaurantsController(IRestaurantService restaurantService)
+        public RestaurantsController(IMediator mediator)
         {
-            _restaurantService = restaurantService;
+            _mediator = mediator;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var restaurants = await _restaurantService.GetAllRestaurants();
+            var request = new GetAllRestaurantsQuery();
+            var restaurants = await _mediator.Send(request);
 
             return Ok(restaurants);
         }
@@ -33,7 +38,11 @@ namespace Restaurants.API.Controllers
 
             try
             {
-                var restaurant = await _restaurantService.GetById(id);
+                var request = new GetRestaurantByIdQuery(id);
+
+                var restaurant = await _mediator.Send(request);
+
+
                 return Ok(restaurant);
             }
             catch (KeyNotFoundException)
@@ -46,9 +55,9 @@ namespace Restaurants.API.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantDTO request)
+        public async Task<IActionResult> CreateRestaurant(CreateRestaurantCommand request)
         {
-            int id = await _restaurantService.Create(request);
+            int id = await _mediator.Send(request);
 
             return CreatedAtAction(nameof(GetById), new { id }, null);
         }

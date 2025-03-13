@@ -22,6 +22,7 @@ namespace Restaurants.Application.Restaurants.Commands.CreateRestaurant
             RuleFor(dto => dto.Category)
                 .Must(category => ValidCategories.Contains(category!)) //u can even simplify this by passing this .Must(ValidCategories.Contains)
                 .WithMessage("Invalid Category. Please choose from the valid categories");
+
                 //.Custom((value, context) =>
                 //{
                 //    var isValidCategory = ValidCategories.Contains(value!);
