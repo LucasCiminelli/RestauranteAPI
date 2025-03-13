@@ -12,6 +12,7 @@ obj/
 *.bak
 
 # Archivos de configuración local
+Restaurants.API/appsettings.Development.json
 appsettings.Development.json
 appsettings.json
 secrets.json
