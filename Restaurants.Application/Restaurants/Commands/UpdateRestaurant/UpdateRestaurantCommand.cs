@@ -16,9 +16,6 @@ namespace Restaurants.Application.Restaurants.Commands.UpdateRestaurant
         public string? Description { get; set; }
         public bool HasDelivery { get; set; }
 
-        public UpdateRestaurantCommand(int id)
-        {
-            Id = id;
-        }
+        
     }
 }

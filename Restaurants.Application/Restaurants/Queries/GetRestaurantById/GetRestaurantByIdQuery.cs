@@ -13,6 +13,9 @@ namespace Restaurants.Application.Restaurants.Queries.GetRestaurantById
 
         public int Id { get; set; }
 
-        
+        public GetRestaurantByIdQuery(int id)
+        {
+            Id = id;
+        }
     }
 }

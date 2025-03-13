@@ -26,7 +26,7 @@ namespace Restaurants.Application.Restaurants.Commands.UpdateRestaurant
 
         public async Task<bool> Handle(UpdateRestaurantCommand request, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("updating restaurant");
+            _logger.LogInformation("updating restaurant with id {RestaurantId} with {@UpdatedRestaurant}", request.Id, request);
 
             var restaurant = await _restaurantRepository.GetByIdAsync(request.Id);
 

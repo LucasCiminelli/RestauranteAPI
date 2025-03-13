@@ -18,7 +18,6 @@ namespace Restaurants.Application.Extensions
         {
             var applicationAssembly = typeof(ServiceCollectionExtensions).Assembly;
 
-
             // services.AddScoped<IRestaurantService, RestaurantService>();
 
             services.AddMediatR(config => config.RegisterServicesFromAssembly(applicationAssembly));
