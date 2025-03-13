@@ -19,6 +19,7 @@ builder.Host.UseSerilog((context, configuration) =>
     configuration
     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
     .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Information)
+    .WriteTo.File("Logs/Restaurant-API-.log", rollingInterval:RollingInterval.Day, rollOnFileSizeLimit:true)
     .WriteTo.Console(outputTemplate: "[{Timestamp:dd-MM HH:mm:ss} {Level:u3}] |{SourceContext}| {NewLine} {Message:lj}{NewLine}{Exception}");
 });
 
