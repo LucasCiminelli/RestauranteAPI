@@ -50,12 +50,7 @@ namespace Restaurants.Infrastructure.Repositories
                 .Include(r => r.Dishes)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            if (restaurant == null)
-            {
-                throw new KeyNotFoundException($"Restaurant with ID {id} not found.");
-            }
-
-            return restaurant;
+            return restaurant!;
         }
 
         public async Task UpdateAsync(Restaurant entity)

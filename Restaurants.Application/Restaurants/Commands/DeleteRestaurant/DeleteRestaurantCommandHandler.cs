@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Domain.Entities;
+using Restaurants.Domain.Exceptions;
 using Restaurants.Domain.Respositories;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Restaurants.Commands.DeleteRestaurant
 {
-    public class DeleteRestaurantCommandHandler : IRequestHandler<DeleteRestaurantCommand, bool>
+    public class DeleteRestaurantCommandHandler : IRequestHandler<DeleteRestaurantCommand>
     {
 
         private readonly ILogger<DeleteRestaurantCommandHandler> _logger;
@@ -21,7 +23,7 @@ namespace Restaurants.Application.Restaurants.Commands.DeleteRestaurant
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<bool> Handle(DeleteRestaurantCommand request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteRestaurantCommand request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Deleting restaurant {RestaurantId}", request.Id);
 
@@ -29,12 +31,11 @@ namespace Restaurants.Application.Restaurants.Commands.DeleteRestaurant
 
             if (restaurant is null)
             {
-                return false;
+                throw new NotFoundException(nameof(Restaurant), request.Id.ToString());
             }
 
             await _restaurantRepository.DeleteAsync(restaurant);
 
-            return true;
         }
     }
 }

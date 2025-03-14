@@ -23,7 +23,7 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type= typeof(IEnumerable<RestaurantDTO>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<RestaurantDTO>))]
         public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll()
         {
             var request = new GetAllRestaurantsQuery();
@@ -38,21 +38,12 @@ namespace Restaurants.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(RestaurantDTO))]
         public async Task<ActionResult<RestaurantDTO>> GetById([FromRoute] int id)
         {
+            var request = new GetRestaurantByIdQuery(id);
 
-            try
-            {
-                var request = new GetRestaurantByIdQuery(id);
-
-                var restaurant = await _mediator.Send(request);
+            var restaurant = await _mediator.Send(request);
 
 
-                return Ok(restaurant);
-            }
-            catch (KeyNotFoundException)
-            {
-
-                return NotFound();
-            }
+            return Ok(restaurant);
 
         }
 
@@ -72,14 +63,12 @@ namespace Restaurants.API.Controllers
         public async Task<IActionResult> DeleteRestaurant([FromRoute] int id)
         {
             var command = new DeleteRestaurantCommand(id);
-            var isDeleted = await _mediator.Send(command);
+            await _mediator.Send(command);
 
-            if (isDeleted)
-            {
-                return NoContent();
-            }
 
-            return NotFound();
+            return NoContent();
+
+
         }
 
 
@@ -105,14 +94,11 @@ namespace Restaurants.API.Controllers
         {
 
             request.Id = id;
-            var isUpdated = await _mediator.Send(request);
 
-            if (isUpdated)
-            {
-                return NoContent();
-            }
+            await _mediator.Send(request);
 
-            return NotFound();
+            return NoContent();
+
         }
 
     }
