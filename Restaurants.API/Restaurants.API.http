@@ -11,3 +11,35 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/3
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Test",
+  "description": "test description",
+  "hasDelivery": false
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "description": "test description",
+  "category": "Italian",
+  "hasDelivery": true,
+  "city": "London",
+  "street": "test",
+  "postalCode": "12-312",
+  "dishes": []
+}
+
+###

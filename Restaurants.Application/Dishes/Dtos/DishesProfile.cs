@@ -10,7 +10,7 @@ namespace Restaurants.Application.Dishes.Dtos
 {
     public class DishesProfile : Profile
     {
-        protected DishesProfile()
+        public DishesProfile()
         {
 
 

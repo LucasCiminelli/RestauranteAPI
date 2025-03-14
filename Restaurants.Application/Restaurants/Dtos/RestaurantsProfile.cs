@@ -12,7 +12,7 @@ namespace Restaurants.Application.Restaurants.Dtos
 {
     public class RestaurantsProfile : Profile
     {
-        protected RestaurantsProfile()
+        public RestaurantsProfile()
         {
 
             CreateMap<UpdateRestaurantCommand, Restaurant>()
