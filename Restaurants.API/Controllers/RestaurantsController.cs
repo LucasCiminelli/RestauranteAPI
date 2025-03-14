@@ -23,7 +23,8 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [ProducesResponseType(StatusCodes.Status200OK, Type= typeof(IEnumerable<RestaurantDTO>))]
+        public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll()
         {
             var request = new GetAllRestaurantsQuery();
             var restaurants = await _mediator.Send(request);
@@ -34,8 +35,8 @@ namespace Restaurants.API.Controllers
 
 
         [HttpGet("{id}", Name = "GetById")]
-
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(RestaurantDTO))]
+        public async Task<ActionResult<RestaurantDTO>> GetById([FromRoute] int id)
         {
 
             try
@@ -66,7 +67,8 @@ namespace Restaurants.API.Controllers
 
 
         [HttpDelete("{id}")]
-
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteRestaurant([FromRoute] int id)
         {
             var command = new DeleteRestaurantCommand(id);
@@ -97,7 +99,8 @@ namespace Restaurants.API.Controllers
         //}
 
         [HttpPatch("{id}")]
-
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> UpdateRestaurant([FromRoute] int id, UpdateRestaurantCommand request)
         {
 
