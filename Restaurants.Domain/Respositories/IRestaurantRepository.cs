@@ -14,7 +14,7 @@ namespace Restaurants.Domain.Respositories
         Task<Restaurant> GetByIdAsync(int id);
         Task<int> CreateAsync(Restaurant entity);
         Task UpdateAsync(Restaurant entity);
-        Task DeleteAsync (Restaurant entity);
+        Task DeleteAsync(Restaurant entity);
 
     }
 }

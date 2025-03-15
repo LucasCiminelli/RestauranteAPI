@@ -31,7 +31,7 @@ namespace Restaurants.Infrastructure.Repositories
 
         public async Task DeleteAsync(Restaurant entity)
         {
-             _dbContext.Restaurants.Remove(entity);
+            _dbContext.Restaurants.Remove(entity);
             await _dbContext.SaveChangesAsync();
         }
 

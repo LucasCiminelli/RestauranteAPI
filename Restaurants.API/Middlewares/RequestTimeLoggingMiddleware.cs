@@ -6,9 +6,9 @@ namespace Restaurants.API.Middlewares
     public class RequestTimeLoggingMiddleware : IMiddleware
     {
 
-		private readonly ILogger _logger;
+		private readonly ILogger<RequestTimeLoggingMiddleware> _logger;
 
-        public RequestTimeLoggingMiddleware(ILogger logger)
+        public RequestTimeLoggingMiddleware(ILogger<RequestTimeLoggingMiddleware> logger)
         {
             _logger = logger;
         }
@@ -23,7 +23,7 @@ namespace Restaurants.API.Middlewares
 
                 if(stopWatch.ElapsedMilliseconds / 1000 > 4)
                 {
-                    _logger.LogInformation("Request {{Verb}} at {Path} took {Time} ms", context.Request.Method, context.Request.Path, stopWatch.ElapsedMilliseconds);
+                    _logger.LogInformation("Request {Verb} at {Path} took {Time} ms", context.Request.Method, context.Request.Path, stopWatch.ElapsedMilliseconds);
                 }
 
             }

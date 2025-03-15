@@ -12,15 +12,15 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Dishes.Commands.CreateDish
 {
-    public class CreateDishCommandHandler : IRequestHandler<CreateDishCommand>
+    public class CreateDishCommandHandler : IRequestHandler<CreateDishCommand, int>
     {
 
-        private readonly ILogger _logger;
+        private readonly ILogger<CreateDishCommandHandler> _logger;
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IDishRepository _dishRepository;
         private readonly IMapper _mapper;
 
-        public CreateDishCommandHandler(ILogger logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper)
+        public CreateDishCommandHandler(ILogger<CreateDishCommandHandler> logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper)
         {
             _logger = logger;
             _restaurantRepository = restaurantRepository;
@@ -28,7 +28,7 @@ namespace Restaurants.Application.Dishes.Commands.CreateDish
             _mapper = mapper;
         }
 
-        public async Task Handle(CreateDishCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateDishCommand request, CancellationToken cancellationToken)
         {
 
             _logger.LogInformation("Creating a new dish: {@DishRequest}", request);
@@ -45,8 +45,8 @@ namespace Restaurants.Application.Dishes.Commands.CreateDish
 
             var dish = _mapper.Map<Dish>(request);
 
-            await _dishRepository.Create(dish);
 
+            return await _dishRepository.Create(dish);
         }
     }
 }

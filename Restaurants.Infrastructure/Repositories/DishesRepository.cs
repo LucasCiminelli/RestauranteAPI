@@ -25,5 +25,11 @@ namespace Restaurants.Infrastructure.Repositories
 
             return entity.Id;
         }
+
+        public async Task RemoveAllDishes(IEnumerable<Dish> entities)
+        {
+            _restaurantsDbContext.Dishes.RemoveRange(entities);
+            await _restaurantsDbContext.SaveChangesAsync();
+        }
     }
 }
