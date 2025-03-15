@@ -3,6 +3,70 @@
   "WorkspaceRootPath": "C:\\RestaurantApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurantapi\\restaurants.infrastructure\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\controllers\\dishescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\controllers\\dishescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\dishes\\commands\\createdish\\createdishcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\dishes\\commands\\createdish\\createdishcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\dishes\\dtos\\dishesprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\dishes\\dtos\\dishesprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurantapi\\restaurants.infrastructure\\repositories\\restaurantsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\repositories\\restaurantsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurantapi\\restaurants.infrastructure\\repositories\\dishesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\repositories\\dishesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|c:\\restaurantapi\\restaurants.domain\\respositories\\idishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|solutionrelative:restaurants.domain\\respositories\\idishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\dishes\\commands\\createdish\\createdishcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\dishes\\commands\\createdish\\createdishcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\dishes\\commands\\createdish\\cretedishcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\dishes\\commands\\createdish\\cretedishcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\middlewares\\requesttimeloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\middlewares\\requesttimeloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\restaurants\\commands\\deleterestaurant\\deleterestaurantcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\restaurants\\commands\\deleterestaurant\\deleterestaurantcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|c:\\restaurantapi\\restaurants.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|solutionrelative:restaurants.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\restaurants\\queries\\getrestaurantbyid\\getrestaurantbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\restaurants\\queries\\getrestaurantbyid\\getrestaurantbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,24 +79,8 @@
       "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\restaurants\\commands\\deleterestaurant\\deleterestaurantcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|c:\\restaurantapi\\restaurants.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|solutionrelative:restaurants.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurantapi\\restaurants.infrastructure\\repositories\\restaurantsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\repositories\\restaurantsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\middlewares\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\restaurants\\commands\\deleterestaurant\\deleterestaurantcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\restaurants\\commands\\deleterestaurant\\deleterestaurantcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurantapi\\restaurants.application\\restaurants\\commands\\updaterestaurant\\updaterestaurantcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|c:\\restaurantapi\\restaurants.domain\\restaurants.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|solutionrelative:restaurants.domain\\restaurants.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\restaurants.api\\restaurants.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -58,50 +102,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DeleteRestaurantCommand.cs",
-              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
-              "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
-              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
-              "RelativeToolTip": "Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Restaurants.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T14:46:08.057Z",
+              "WhenOpened": "2025-03-14T23:34:15.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DishesProfile.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Dtos\\DishesProfile.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Dishes\\Dtos\\DishesProfile.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Dtos\\DishesProfile.cs",
+              "RelativeToolTip": "Restaurants.Application\\Dishes\\Dtos\\DishesProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:31:17.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DishesRepository.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\DishesRepository.cs",
+              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Repositories\\DishesRepository.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\DishesRepository.cs",
+              "RelativeToolTip": "Restaurants.Infrastructure\\Repositories\\DishesRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:25:59.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDishRepository.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Domain\\Respositories\\IDishRepository.cs",
+              "RelativeDocumentMoniker": "Restaurants.Domain\\Respositories\\IDishRepository.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Domain\\Respositories\\IDishRepository.cs",
+              "RelativeToolTip": "Restaurants.Domain\\Respositories\\IDishRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:24:13.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateDishCommandHandler.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommandHandler.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommandHandler.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommandHandler.cs",
+              "RelativeToolTip": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommandHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:12:29.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "UpdateRestaurantCommand.cs",
-              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
-              "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
-              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
-              "RelativeToolTip": "Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Title": "CreteDishCommandValidator.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreteDishCommandValidator.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreteDishCommandValidator.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreteDishCommandValidator.cs",
+              "RelativeToolTip": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreteDishCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T14:45:55.061Z",
+              "WhenOpened": "2025-03-14T23:10:26.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "CreateDishCommand.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommand.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommand.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Dishes\\Commands\\CreateDish\\CreateDishCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:09:25.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DishesController.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Controllers\\DishesController.cs",
+              "RelativeDocumentMoniker": "Restaurants.API\\Controllers\\DishesController.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\Controllers\\DishesController.cs",
+              "RelativeToolTip": "Restaurants.API\\Controllers\\DishesController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:46:08.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RequestTimeLoggingMiddleware.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Middlewares\\RequestTimeLoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "Restaurants.API\\Middlewares\\RequestTimeLoggingMiddleware.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\Middlewares\\RequestTimeLoggingMiddleware.cs",
+              "RelativeToolTip": "Restaurants.API\\Middlewares\\RequestTimeLoggingMiddleware.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:55:21.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RestaurantsRepository.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
+              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
+              "RelativeToolTip": "Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:52:41.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Restaurants.API\\appsettings.Development.json",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\appsettings.Development.json",
+              "RelativeToolTip": "Restaurants.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T17:18:42.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "GetRestaurantByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Queries\\GetRestaurantById\\GetRestaurantByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Queries\\GetRestaurantById\\GetRestaurantByIdQueryHandler.cs",
               "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Queries\\GetRestaurantById\\GetRestaurantByIdQueryHandler.cs",
               "RelativeToolTip": "Restaurants.Application\\Restaurants\\Queries\\GetRestaurantById\\GetRestaurantByIdQueryHandler.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAtwCQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAtwCAAAACcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T14:44:39.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 17,
               "Title": "UpdateRestaurantCommandHandler.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommandHandler.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommandHandler.cs",
@@ -114,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "DeleteRestaurantCommandHandler.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommandHandler.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommandHandler.cs",
@@ -127,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 19,
               "Title": "RestaurantsController.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Controllers\\RestaurantsController.cs",
               "RelativeDocumentMoniker": "Restaurants.API\\Controllers\\RestaurantsController.cs",
@@ -140,46 +301,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Domain\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "Restaurants.Domain\\Exceptions\\NotFoundException.cs",
               "ToolTip": "C:\\RestaurantApi\\Restaurants.Domain\\Exceptions\\NotFoundException.cs",
               "RelativeToolTip": "Restaurants.Domain\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T14:40:11.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RestaurantsRepository.cs",
-              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
-              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
-              "ToolTip": "C:\\RestaurantApi\\Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
-              "RelativeToolTip": "Restaurants.Infrastructure\\Repositories\\RestaurantsRepository.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDQAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Program.cs",
+              "RelativeDocumentMoniker": "Restaurants.API\\Program.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\Program.cs",
+              "RelativeToolTip": "Restaurants.API\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T14:52:41.751Z",
+              "WhenOpened": "2025-03-14T13:54:05.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ErrorHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Middlewares\\ErrorHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Restaurants.API\\Middlewares\\ErrorHandlingMiddleware.cs",
               "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\Middlewares\\ErrorHandlingMiddleware.cs",
               "RelativeToolTip": "Restaurants.API\\Middlewares\\ErrorHandlingMiddleware.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T14:32:34.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
+              "Title": "DeleteRestaurantCommand.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Restaurants\\Commands\\DeleteRestaurant\\DeleteRestaurantCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:46:08.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Restaurants.API\\appsettings.json",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\appsettings.json",
+              "RelativeToolTip": "Restaurants.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T17:18:40.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdateRestaurantCommand.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
+              "ToolTip": "C:\\RestaurantApi\\Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Restaurants\\Commands\\UpdateRestaurant\\UpdateRestaurantCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:45:55.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Restaurants.Domain",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.Domain\\Restaurants.Domain.csproj",
               "RelativeDocumentMoniker": "Restaurants.Domain\\Restaurants.Domain.csproj",
@@ -192,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "Restaurants.API",
               "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Restaurants.API.csproj",
               "RelativeDocumentMoniker": "Restaurants.API\\Restaurants.API.csproj",
@@ -201,19 +401,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-03-14T14:32:08.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\RestaurantApi\\Restaurants.API\\Program.cs",
-              "RelativeDocumentMoniker": "Restaurants.API\\Program.cs",
-              "ToolTip": "C:\\RestaurantApi\\Restaurants.API\\Program.cs",
-              "RelativeToolTip": "Restaurants.API\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T13:54:05.949Z",
               "EditorCaption": ""
             }
           ]

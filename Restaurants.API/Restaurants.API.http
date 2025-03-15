@@ -7,20 +7,20 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=1
+@id=5
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
 
-DELETE {{Restaurants.API_HostAddress}}/api/restaurants/3
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/5
 
 ###
 
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/2
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 2,
   "name": "Test",
   "description": "test description",
   "hasDelivery": false
@@ -32,8 +32,8 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "name": "Test",
-  "description": "test description",
+  "name": "Test2",
+  "description": "test description2",
   "category": "Italian",
   "hasDelivery": true,
   "city": "London",
