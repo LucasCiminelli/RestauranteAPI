@@ -61,7 +61,7 @@ Content-Type: application/json
 
 ###
 
-@dishId=6
+@dishId=9
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes/{{dishId}}
 
 ###
@@ -69,3 +69,24 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes/{{di
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/register
+Content-type: application/json
+
+
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}
+
+###
+
+
+POST {{Restaurants.API_HostAddress}}/login
+Content-type: application/json
+
+
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}

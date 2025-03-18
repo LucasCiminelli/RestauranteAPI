@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Restaurants.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/restaurants")]
     public class RestaurantsController : ControllerBase
     {
         private readonly IMediator _mediator;

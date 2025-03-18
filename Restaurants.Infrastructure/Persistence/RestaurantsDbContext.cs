@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Restaurants.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Infrastructure.Persistence
 {
-    public class RestaurantsDbContext : DbContext
+    public class RestaurantsDbContext : IdentityDbContext<User>
     {
         public RestaurantsDbContext(DbContextOptions<RestaurantsDbContext> options) : base(options)
         {
@@ -20,6 +21,9 @@ namespace Restaurants.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Restaurant>().OwnsOne(r => r.Address);
 
             modelBuilder.Entity<Restaurant>()
