@@ -9,6 +9,9 @@ namespace Restaurants.API.Extensions
 
         public static void AddPresentation(this WebApplicationBuilder builder)
         {
+
+            builder.Services.AddAuthentication(); //get the token and use this token in the form of header as a bearer token for any Http Request.
+
             builder.Services.AddControllers();
 
             builder.Services.AddSwaggerGen(config

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Restaurants;
 using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
@@ -13,6 +14,7 @@ namespace Restaurants.API.Controllers
 {
     [ApiController]
     [Route("api/restaurants")]
+    [Authorize]
     public class RestaurantsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -23,6 +25,7 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<RestaurantDTO>))]
         public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll()
         {
