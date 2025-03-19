@@ -38,7 +38,7 @@ namespace Restaurants.API.Controllers
             return NoContent();
         }
 
-        [HttpDelete("unnasignUserRole")]
+        [HttpDelete("userRole")]
         [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> UnassignUserRole(UnassignUserRoleCommand command)
         {

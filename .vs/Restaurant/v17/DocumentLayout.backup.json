@@ -7,12 +7,28 @@
       "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\restaurants.application\\users\\commands\\unnasignuserrole\\unassignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\users\\commands\\unnasignuserrole\\unassignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\restaurants.application\\users\\commands\\assignuserrole\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\users\\commands\\assignuserrole\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\restaurants.application\\users\\commands\\unnasignuserrole\\unassignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:restaurants.application\\users\\commands\\unnasignuserrole\\unassignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\restaurants.infrastructure\\seeders\\restaurantseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\seeders\\restaurantseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24CB56C5-3F50-4A34-85D0-903EFFBBBB5B}|Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\restaurants.application\\users\\commands\\assignuserrole\\assignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\restaurants.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{C3F3C009-088E-4BA1-18AC-FD16FAA7DCC4}|Restaurants.API\\Restaurants.API.csproj|solutionrelative:restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\restaurants.infrastructure\\seeders\\restaurantseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1002AE53-407A-412E-8D6D-9917F04F847E}|Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:restaurants.infrastructure\\seeders\\restaurantseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04D13700-04F8-4E61-AEFC-45EE0AEC20A8}|Restaurants.Domain\\Restaurants.Domain.csproj|c:\\restaurant\\restaurants.domain\\constants\\userroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,8 +94,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnassignUserRoleCommandHandler.cs",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandler.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandler.cs",
+              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandler.cs",
+              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:05:01.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnassignUserRoleCommand.cs",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommand.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommand.cs",
+              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:04:23.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Restaurants.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Restaurant\\Restaurants.API\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Restaurants.API\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T15:33:49.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Restaurants.API.http",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Restaurants.API.http",
+              "RelativeDocumentMoniker": "Restaurants.API\\Restaurants.API.http",
+              "ToolTip": "C:\\Restaurant\\Restaurants.API\\Restaurants.API.http",
+              "RelativeToolTip": "Restaurants.API\\Restaurants.API.http",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAywE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-03-18T14:40:54.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RestaurantSeeder.cs",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
+              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
+              "ToolTip": "C:\\Restaurant\\Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
+              "RelativeToolTip": "Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwDcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T16:09:00.146Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -96,27 +169,14 @@
               "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
               "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
               "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T12:30:10.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssignUserRoleCommand.cs",
-              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
-              "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
-              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
-              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T12:29:58.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "RestaurantsController.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Controllers\\RestaurantsController.cs",
               "RelativeDocumentMoniker": "Restaurants.API\\Controllers\\RestaurantsController.cs",
@@ -129,20 +189,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Restaurants.API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Restaurant\\Restaurants.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Restaurants.API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "AssignUserRoleCommand.cs",
+              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T15:33:49.882Z",
+              "WhenOpened": "2025-03-19T12:29:58.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Restaurants.API\\appsettings.Development.json",
@@ -155,12 +215,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "UpdateUserDetailsCommand.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs",
-              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs*",
-              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs*",
+              "ToolTip": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs",
+              "RelativeToolTip": "Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T15:35:15.37Z",
@@ -168,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\appsettings.json",
               "RelativeDocumentMoniker": "Restaurants.API\\appsettings.json",
@@ -181,19 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RestaurantSeeder.cs",
-              "DocumentMoniker": "C:\\Restaurant\\Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
-              "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
-              "ToolTip": "C:\\Restaurant\\Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
-              "RelativeToolTip": "Restaurants.Infrastructure\\Seeders\\RestaurantSeeder.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAwwCIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T16:09:00.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "20250318153230_UserAdditionalPropertiesAdded.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Infrastructure\\Migrations\\20250318153230_UserAdditionalPropertiesAdded.cs",
               "RelativeDocumentMoniker": "Restaurants.Infrastructure\\Migrations\\20250318153230_UserAdditionalPropertiesAdded.cs",
@@ -205,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Restaurants.Domain\\Entities\\User.cs",
@@ -217,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ServiceCollectionExtensions.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Extensions\\ServiceCollectionExtensions.cs",
@@ -229,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UserContext.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\UserContext.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Users\\UserContext.cs",
@@ -241,20 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Restaurants.API.http",
-              "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Restaurants.API.http",
-              "RelativeDocumentMoniker": "Restaurants.API\\Restaurants.API.http",
-              "ToolTip": "C:\\Restaurant\\Restaurants.API\\Restaurants.API.http",
-              "RelativeToolTip": "Restaurants.API\\Restaurants.API.http",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswE8AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-03-18T14:40:54.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Program.cs",
               "RelativeDocumentMoniker": "Restaurants.API\\Program.cs",
@@ -267,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UserRoles.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Domain\\Constants\\UserRoles.cs",
               "RelativeDocumentMoniker": "Restaurants.Domain\\Constants\\UserRoles.cs",
@@ -279,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Restaurants.Application.csproj",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Restaurants.Application.csproj",
               "RelativeDocumentMoniker": "Restaurants.Application\\Restaurants.Application.csproj",
@@ -291,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UpdateUserDetailsCommandHandler.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
@@ -304,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CurrentUser.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.Application\\Users\\CurrentUser.cs",
               "RelativeDocumentMoniker": "Restaurants.Application\\Users\\CurrentUser.cs",
@@ -316,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "WebApplicationBuilderExtensions.cs",
               "DocumentMoniker": "C:\\Restaurant\\Restaurants.API\\Extensions\\WebApplicationBuilderExtensions.cs",
               "RelativeDocumentMoniker": "Restaurants.API\\Extensions\\WebApplicationBuilderExtensions.cs",

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Respositories;
+using Restaurants.Infrastructure.Authorization;
 using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Repositories;
 using Restaurants.Infrastructure.Seeders;
@@ -29,6 +30,7 @@ namespace Restaurants.Infrastructure.Extensions
 
             services.AddIdentityApiEndpoints<User>()
                 .AddRoles<IdentityRole>() //support for role claim
+                .AddClaimsPrincipalFactory<RestaurantsUserClaimsPrincipalFactory>()
                 .AddEntityFrameworkStores<RestaurantsDbContext>();
 
             services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
