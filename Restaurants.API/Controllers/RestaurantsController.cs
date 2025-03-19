@@ -8,6 +8,7 @@ using Restaurants.Application.Restaurants.Commands.UpdateRestaurant;
 using Restaurants.Application.Restaurants.Dtos;
 using Restaurants.Application.Restaurants.Queries.GetAllRestaurants;
 using Restaurants.Application.Restaurants.Queries.GetRestaurantById;
+using Restaurants.Domain.Constants;
 using System.Threading.Tasks;
 
 namespace Restaurants.API.Controllers
@@ -29,6 +30,7 @@ namespace Restaurants.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<RestaurantDTO>))]
         public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll()
         {
+
             var request = new GetAllRestaurantsQuery();
             var restaurants = await _mediator.Send(request);
 
@@ -52,6 +54,8 @@ namespace Restaurants.API.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize(Roles = UserRoles.Owner)]
         public async Task<IActionResult> CreateRestaurant(CreateRestaurantCommand request)
         {
             int id = await _mediator.Send(request);

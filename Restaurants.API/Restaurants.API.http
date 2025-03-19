@@ -5,13 +5,13 @@
 
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
-Authorization: Bearer {{token}}
+
 
 ###
 
-@id=5
+@id=2
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
-
+Authorization: Bearer {{token}}
 ###
 
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/5

@@ -1,4 +1,6 @@
-﻿using Restaurants.Domain.Entities;
+﻿using Microsoft.AspNetCore.Identity;
+using Restaurants.Domain.Constants;
+using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
@@ -28,22 +30,43 @@ namespace Restaurants.Infrastructure.Seeders
                     _dbContext.Restaurants.AddRange(restaurants);
                     await _dbContext.SaveChangesAsync();
                 }
+
+                if (!_dbContext.Roles.Any()) 
+                {
+
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
+                    await _dbContext.SaveChangesAsync();
+
+
+                }
             }
         }
 
+        public IEnumerable<IdentityRole> GetRoles()
+        {
+            List<IdentityRole> roles =
+                [
+                    new IdentityRole(UserRoles.Admin),
+                    new IdentityRole(UserRoles.Owner),
+                    new IdentityRole(UserRoles.User)
+                ];
+
+            return roles;
+        }
 
         public IEnumerable<Restaurant> GetRestaurants()
         {
             List<Restaurant> restaurants = [
 
-                new() 
+                new()
                 {
                     Name = "KFC",
                     Category = "Fast Food",
                     Description = "Description Value",
                     ContactEmail = "contact@kfc.com",
                     HasDelivery = true,
-                    Dishes = 
+                    Dishes =
                     [
 
                         new ()
