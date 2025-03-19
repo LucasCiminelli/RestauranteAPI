@@ -9,6 +9,7 @@ using Restaurants.Application.Restaurants.Dtos;
 using Restaurants.Application.Restaurants.Queries.GetAllRestaurants;
 using Restaurants.Application.Restaurants.Queries.GetRestaurantById;
 using Restaurants.Domain.Constants;
+using Restaurants.Infrastructure.Authorization;
 using System.Threading.Tasks;
 
 namespace Restaurants.API.Controllers
@@ -40,6 +41,7 @@ namespace Restaurants.API.Controllers
 
 
         [HttpGet("{id}", Name = "GetById")]
+        [Authorize(Policy = PolicyNames.HasNationality)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(RestaurantDTO))]
         public async Task<ActionResult<RestaurantDTO>> GetById([FromRoute] int id)
         {
