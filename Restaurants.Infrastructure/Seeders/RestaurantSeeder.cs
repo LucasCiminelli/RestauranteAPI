@@ -31,7 +31,7 @@ namespace Restaurants.Infrastructure.Seeders
                     await _dbContext.SaveChangesAsync();
                 }
 
-                if (!_dbContext.Roles.Any()) 
+                if (!_dbContext.Roles.Any())
                 {
 
                     var roles = GetRoles();
@@ -47,9 +47,18 @@ namespace Restaurants.Infrastructure.Seeders
         {
             List<IdentityRole> roles =
                 [
-                    new IdentityRole(UserRoles.Admin),
-                    new IdentityRole(UserRoles.Owner),
+                    new IdentityRole(UserRoles.Admin)
+                    {
+                        NormalizedName = UserRoles.Admin.ToUpper()
+                    },
+                    new IdentityRole(UserRoles.Owner)
+                    {
+                         NormalizedName = UserRoles.Owner.ToUpper()
+                    },
                     new IdentityRole(UserRoles.User)
+                    {
+                         NormalizedName = UserRoles.User.ToUpper()
+                    }
                 ];
 
             return roles;
