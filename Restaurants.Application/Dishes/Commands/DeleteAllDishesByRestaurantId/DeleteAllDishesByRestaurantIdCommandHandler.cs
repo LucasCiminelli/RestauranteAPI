@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Domain.Constants;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
+using Restaurants.Domain.Interfaces;
 using Restaurants.Domain.Respositories;
 using System;
 using System.Collections.Generic;
@@ -17,12 +19,14 @@ namespace Restaurants.Application.Dishes.Commands.DeleteAllDishesByRestaurantId
         private readonly ILogger<DeleteAllDishesByRestaurantIdCommandHandler> _logger;
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IDishRepository _dishRepository;
+        private readonly IRestaurantAuthorizationService _restaurantAuthorizationService;
 
-        public DeleteAllDishesByRestaurantIdCommandHandler(ILogger<DeleteAllDishesByRestaurantIdCommandHandler> logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository)
+        public DeleteAllDishesByRestaurantIdCommandHandler(ILogger<DeleteAllDishesByRestaurantIdCommandHandler> logger, IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IRestaurantAuthorizationService restaurantAuthorizationService)
         {
             _logger = logger;
             _restaurantRepository = restaurantRepository;
             _dishRepository = dishRepository;
+            _restaurantAuthorizationService = restaurantAuthorizationService;
         }
 
         public async Task Handle(DeleteAllDishesByRestaurantIdCommand request, CancellationToken cancellationToken)
@@ -35,7 +39,11 @@ namespace Restaurants.Application.Dishes.Commands.DeleteAllDishesByRestaurantId
             {
 
                 throw new NotFoundException(nameof(Restaurant), request.RestaurantId.ToString());
+            }
 
+            if (!_restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Update))
+            {
+                throw new ForbidException();
             }
 
             await _dishRepository.RemoveAllDishes(restaurant.Dishes!);

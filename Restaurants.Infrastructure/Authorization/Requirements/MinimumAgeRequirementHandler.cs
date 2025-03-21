@@ -28,15 +28,10 @@ namespace Restaurants.Infrastructure.Authorization.Requirements
 
             _logger.LogInformation("User: {Email}, date of birth {DateOfBirh} - Handling MinimumAgeRequirement", user!.Email, user!.DateOfBirth);
 
-            if (user.DateOfBirth == null)
-            {
-                _logger.LogWarning("User Date of birth is null");
-                context.Fail();
-                return Task.CompletedTask;
-            }
+            
 
 
-            if (user.DateOfBirth.Value.AddYears(requirement.MinimumAge) <= DateOnly.FromDateTime(DateTime.Today))
+            if (user.DateOfBirth!.Value.AddYears(requirement.MinimumAge) <= DateOnly.FromDateTime(DateTime.Today))
             {
                 _logger.LogInformation("Authorization Succeeded");
                 context.Succeed(requirement);
