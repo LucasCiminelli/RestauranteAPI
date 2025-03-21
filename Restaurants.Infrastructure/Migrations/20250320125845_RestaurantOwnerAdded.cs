@@ -17,6 +17,8 @@ namespace Restaurants.Infrastructure.Migrations
                 nullable: false,
                 defaultValue: "");
 
+            migrationBuilder.Sql("UPDATE Restaurants SET OwnerId = (SELECT TOP 1 Id FROM AspNetUsers)");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Restaurants_OwnerId",
                 table: "Restaurants",
