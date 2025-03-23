@@ -44,6 +44,25 @@ namespace Restaurants.Infrastructure.Repositories
             return restaurants;
         }
 
+        public async Task<(IEnumerable<Restaurant>, int)> GetAllMatchingAsync(string? searchPhrase, int pageSize, int pageNumber)
+        {
+
+            var searchPhraseLower = searchPhrase?.ToLower();
+
+            var baseQuery = _dbContext.Restaurants
+                .Where(r => searchPhraseLower == null || (r.Name!.ToLower().Contains(searchPhraseLower) || r.Description!.ToLower().Contains(searchPhraseLower)))
+                .Include(r => r.Dishes);
+
+            var totalCount = await baseQuery.CountAsync();
+
+            var restaurants = await baseQuery
+                .Skip(pageSize * (pageNumber -1))
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (restaurants, totalCount);
+        }
+
         public async Task<Restaurant> GetByIdAsync(int id)
         {
             var restaurant = await _dbContext.Restaurants

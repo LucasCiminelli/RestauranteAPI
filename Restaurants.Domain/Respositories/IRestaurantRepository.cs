@@ -11,6 +11,7 @@ namespace Restaurants.Domain.Respositories
     {
 
         Task<IEnumerable<Restaurant>> GetAllAsync();
+        Task<(IEnumerable<Restaurant>, int)> GetAllMatchingAsync(string? searchPhrase, int pageSize, int pageNumber);
         Task<Restaurant> GetByIdAsync(int id);
         Task<int> CreateAsync(Restaurant entity);
         Task UpdateAsync(Restaurant entity);

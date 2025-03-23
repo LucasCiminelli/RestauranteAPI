@@ -29,11 +29,10 @@ namespace Restaurants.API.Controllers
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<RestaurantDTO>))]
-        public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll()
+        public async Task<ActionResult<IEnumerable<RestaurantDTO>>> GetAll([FromQuery] GetAllRestaurantsQuery query)
         {
 
-            var request = new GetAllRestaurantsQuery();
-            var restaurants = await _mediator.Send(request);
+            var restaurants = await _mediator.Send(query);
 
             return Ok(restaurants);
         }
