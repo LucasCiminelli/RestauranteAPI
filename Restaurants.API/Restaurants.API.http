@@ -4,7 +4,7 @@
 @Restaurants.API_HostAddress = https://localhost:7214
 
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1
+GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Descending
 
 
 ###
