@@ -41,7 +41,7 @@ namespace Restaurants.Application.Dishes.Commands.DeleteAllDishesByRestaurantId
                 throw new NotFoundException(nameof(Restaurant), request.RestaurantId.ToString());
             }
 
-            if (!_restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Update))
+            if (!_restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Delete))
             {
                 throw new ForbidException();
             }
