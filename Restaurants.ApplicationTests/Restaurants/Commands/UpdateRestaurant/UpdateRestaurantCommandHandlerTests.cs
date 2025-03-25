@@ -72,8 +72,11 @@ namespace Restaurants.Application.Restaurants.Commands.UpdateRestaurant.Tests
 
             _restaurantAuthorizationMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(true);
 
+            //Act
+
             await _handler.Handle(command,CancellationToken.None);
 
+            //assert
 
             _restaurantRepositoryMock.Verify(r => r.UpdateAsync(restaurant), Times.Once);
             _mapperMock.Verify(m => m.Map(command, restaurant), Times.Once);

@@ -32,6 +32,8 @@ namespace Restaurants.Application.Restaurants.Dtos.Tests
         public void CreateMap_ForRestaurantToRestaurantDTO_MapsCorrectly()
         {
 
+            //arrange
+
             var restaurant = new Restaurant()
             {
                 Id = 1,
@@ -71,6 +73,7 @@ namespace Restaurants.Application.Restaurants.Dtos.Tests
         [Fact()]
         public void CreateMap_ForCreateRestaurantCommandToRestaurant_MapsCorrectly()
         {
+            //arrange 
 
             var command = new CreateRestaurantCommand()
             {
@@ -112,6 +115,8 @@ namespace Restaurants.Application.Restaurants.Dtos.Tests
         [Fact()]
         public void CreateMap_ForUpdateRestaurantCommandToRestaurant_MapsCorrectly()
         {
+
+            //arrange
 
             var command = new UpdateRestaurantCommand()
             {
