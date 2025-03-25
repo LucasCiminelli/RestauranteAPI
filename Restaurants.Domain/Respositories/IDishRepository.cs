@@ -9,7 +9,6 @@ namespace Restaurants.Domain.Respositories
 {
     public interface IDishRepository
     {
-
         Task<int> Create(Dish entity);
         Task RemoveAllDishes(IEnumerable<Dish> entities);
     }
