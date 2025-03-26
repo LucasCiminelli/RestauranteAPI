@@ -142,7 +142,6 @@ namespace Restaurants.Application.Dishes.Queries.GetDishByIdForRestaurant.Tests
 
         }
 
-
         [Fact()]
         public async Task Handle_GetDishByNonExistingDishes_ReturnsException()
         {
