@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Restaurants.Application.Dishes.Commands.CreateDish;
+using Restaurants.Application.Dishes.Commands.UpdateDishById;
 using Restaurants.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace Restaurants.Application.Dishes.Dtos
 
             CreateMap<Dish, DishDTO>();
             CreateMap<CreateDishCommand, Dish>();
+            CreateMap<UpdateDishByIdCommand, Dish>()
+                 .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
 
         }
     }
