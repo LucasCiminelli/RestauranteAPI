@@ -55,8 +55,7 @@ namespace Restaurants.API.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = UserRoles.Admin)]
-        [Authorize(Roles = UserRoles.Owner)]
+      
         public async Task<IActionResult> CreateRestaurant(CreateRestaurantCommand request)
         {
             int id = await _mediator.Send(request);

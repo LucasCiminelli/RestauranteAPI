@@ -23,7 +23,9 @@ namespace Restaurants.APITests
                     new[]
                     {
                         new Claim(ClaimTypes.NameIdentifier, "1"),
+                        new Claim(ClaimTypes.Email, "test@example.com"),
                         new Claim(ClaimTypes.Role, "Admin"),
+                        new Claim(ClaimTypes.Role, "Owner")
                     }
                 )
             );

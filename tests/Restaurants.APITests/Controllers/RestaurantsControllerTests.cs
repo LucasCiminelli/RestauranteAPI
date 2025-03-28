@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using Restaurants.API.Controllers;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,19 @@ using Restaurants.Domain.Entities;
 using Restaurants.APITests;
 using System.Net.Http.Json;
 using Restaurants.Application.Restaurants.Dtos;
+using Azure;
+using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
+using Restaurants.Application.Users;
 
 namespace Restaurants.API.Controllers.Tests
 {
+    [TestClass()]
     public class RestaurantsControllerTests : IClassFixture<WebApplicationFactory<Program>>
     {
 
         private readonly WebApplicationFactory<Program> _factory;
         private readonly Mock<IRestaurantRepository> _restarantRepositoryMock = new();
+        private readonly Mock<IUserContext> _userContextMock = new();
 
         public RestaurantsControllerTests(WebApplicationFactory<Program> factory)
         {
@@ -32,8 +38,12 @@ namespace Restaurants.API.Controllers.Tests
             {
                 builder.ConfigureTestServices(services =>
                 {
+
+                    _userContextMock.Setup(c => c.GetCurrentUser()).Returns(new CurrentUser("1", "test@example.com", ["Admin", "Owner"], null, null));
+
                     services.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
                     services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantRepository), _ => _restarantRepositoryMock.Object));
+                    services.Replace(ServiceDescriptor.Scoped(typeof(IUserContext), _ => _userContextMock.Object));
                 });
             });
         }
@@ -137,6 +147,36 @@ namespace Restaurants.API.Controllers.Tests
             restaurantDTO.Should().NotBeNull();
             restaurantDTO.Name.Should().Be("Test Restaurant");
             restaurantDTO.Description.Should().Be("Test Description");
+        }
+
+        [Fact()]
+        public async Task Create_ForValidRequest_ReturnStatus201Created()
+        {
+            // Arrange
+            var restaurant = new CreateRestaurantCommand
+            {
+                Name = "Test",
+                Category = "Italian",
+                PostalCode = "12-345",
+                ContactEmail = "Test@test.com",
+                Description = "Test Description"
+            };
+
+            _restarantRepositoryMock.Setup(r => r.CreateAsync(It.IsAny<Restaurant>())).ReturnsAsync(123);
+
+            var client = _factory.CreateClient();
+
+            // Act
+            var result = await client.PostAsJsonAsync($"/api/restaurants/", restaurant);
+            var location = result.Headers.Location;
+
+            // Assert
+            _restarantRepositoryMock.Verify(r => r.CreateAsync(It.IsAny<Restaurant>()), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
+            location.Should().NotBeNull();
+            location.AbsolutePath.Should().Be("/api/restaurants/123");
+
+
         }
     }
 }
