@@ -39,8 +39,8 @@ namespace Restaurants.Application.Users
             var userId = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)!.Value;
             var emailAddress = user.FindFirst(c => c.Type == ClaimTypes.Email)!.Value;
             var roles = user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(r => r.Value);
-            var nationality = user.FindFirst(c => c.Type == "Nationality")!.Value;
-            var dateOfBithString = user.FindFirst(c => c.Type == "DateOfBirth")!.Value;
+            var nationality = user.FindFirst(c => c.Type == "Nationality")?.Value ?? string.Empty;
+            var dateOfBithString = user.FindFirst(c => c.Type == "DateOfBirth")?.Value;
             var dateOfBIrth = dateOfBithString == null
                 ? (DateOnly?)null
                 : DateOnly.ParseExact(dateOfBithString, "yyyy-MM-dd");

@@ -4,7 +4,7 @@
 @Restaurants.API_HostAddress = https://localhost:7214
 
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Descending
+GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Descending&searchPhrase="test"
 
 
 ###
@@ -77,7 +77,7 @@ Content-type: application/json
 
 
 {
-  "email": "user@test.com",
+  "email": "owner@test.com",
   "password": "Password1!"
 }
 
@@ -89,9 +89,18 @@ Content-type: application/json
 
 
 {
-  "email": "testuser@test.com",
+  "email": "admin@test.com",
   "password": "Password1!"
 }
 GET {{Restaurants.API_HostAddress}}/api/restaurants
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{restaurantId}/dishes/{dishId}
+Content-Type: application/json
+
+{
+  //UpdateDishByIdCommand
+}
 
 ###

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Domain.Constants;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
+using Restaurants.Domain.Interfaces;
 using Restaurants.Domain.Respositories;
 using System;
 using System.Collections.Generic;
@@ -19,13 +21,15 @@ namespace Restaurants.Application.Dishes.Commands.UpdateDishById
         private readonly IDishRepository _dishRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<UpdateDishByIdCommandHandler> _logger;
+        private readonly IRestaurantAuthorizationService _restaurantAuthorizationService;
 
-        public UpdateDishByIdCommandHandler(IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper, ILogger<UpdateDishByIdCommandHandler> logger)
+        public UpdateDishByIdCommandHandler(IRestaurantRepository restaurantRepository, IDishRepository dishRepository, IMapper mapper, ILogger<UpdateDishByIdCommandHandler> logger, IRestaurantAuthorizationService restaurantAuthorizationService)
         {
             _restaurantRepository = restaurantRepository;
             _dishRepository = dishRepository;
             _mapper = mapper;
             _logger = logger;
+            _restaurantAuthorizationService = restaurantAuthorizationService;
         }
 
         public async Task Handle(UpdateDishByIdCommand request, CancellationToken cancellationToken)
@@ -49,11 +53,16 @@ namespace Restaurants.Application.Dishes.Commands.UpdateDishById
 
             var dishToUpdate = dishes.FirstOrDefault(x => x.Id == request.DishId);
 
-            if (dishToUpdate == null)
+            if (dishToUpdate == null || dishToUpdate.RestaurantId != request.RestaurantId)
             {
 
                 throw new NotFoundException(nameof(Dish), request.DishId.ToString());
 
+            }
+
+            if(!_restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Update))
+            {
+                throw new ForbidException();
             }
 
 

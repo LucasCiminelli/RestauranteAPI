@@ -22,7 +22,7 @@ namespace Restaurants.Infrastructure.Repositories
         {
             await _restaurantsDbContext.Dishes.AddAsync(entity);
             await _restaurantsDbContext.SaveChangesAsync();
-
+            
             return entity.Id;
         }
 

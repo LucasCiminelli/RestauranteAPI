@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Dishes.Commands.CreateDish;
 using Restaurants.Application.Dishes.Commands.DeleteAllDishesByRestaurantId;
+using Restaurants.Application.Dishes.Commands.DeleteDishById;
+using Restaurants.Application.Dishes.Commands.UpdateDishById;
 using Restaurants.Application.Dishes.Dtos;
 using Restaurants.Application.Dishes.Queries.GetAllDishesForRestaurant;
 using Restaurants.Application.Dishes.Queries.GetDishByIdForRestaurant;
@@ -53,12 +55,39 @@ namespace Restaurants.API.Controllers
             return Ok(dish);
         }
 
+        [HttpPatch("{dishId}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> UpdateDishById([FromRoute] int restaurantId, [FromRoute] int dishId, [FromBody]UpdateDishByIdCommand command)
+        {
+            command.DishId = dishId;
+            command.RestaurantId = restaurantId;
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> DeleteAllDishesByRestaurantId([FromRoute] int restaurantId)
         {
             var command = new DeleteAllDishesByRestaurantIdCommand(restaurantId);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{dishId}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<ActionResult> DeleteDishById([FromRoute] int restaurantId, [FromRoute] int dishId)
+        {
+            var command = new DeleteDishByIdCommand(restaurantId, dishId);
 
             await _mediator.Send(command);
 
