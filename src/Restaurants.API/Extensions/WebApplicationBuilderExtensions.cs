@@ -14,27 +14,33 @@ namespace Restaurants.API.Extensions
 
             builder.Services.AddControllers();
 
-            builder.Services.AddSwaggerGen(config
-                =>
-            {
-                config.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
-                {
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "Bearer"
-                });
+            builder.Services.AddSwaggerGen
+                (
+                    config
+                    =>
+                    {
+                        config.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+                        {
+                            Type = SecuritySchemeType.Http,
+                            Scheme = "Bearer"
+                        });
 
-                config.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference{ Type = ReferenceType.SecurityScheme, Id = "bearerAuth"}
-            },
-            []
-        }
-    });
+                        config.AddSecurityRequirement
+                            (
+                                new OpenApiSecurityRequirement
+                                {
+                                    {
+                                        new OpenApiSecurityScheme
+                                        {
+                                        Reference = new OpenApiReference{ Type = ReferenceType.SecurityScheme, Id = "bearerAuth"}
+                                        },
+                                        []
+                                    }
+                                }
+                            );
 
-            });
+                    }
+                );
 
             builder.Services.AddEndpointsApiExplorer();
 
