@@ -475,7 +475,7 @@ namespace Restaurants.API.Controllers.Tests
 
 
             _restaurantsRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
-            _authorizationServiceMock.Verify(a => a.Authorize(restaurant,ResourceOperation.Delete), Times.Once());
+            _authorizationServiceMock.Verify(a => a.Authorize(restaurant, ResourceOperation.Delete), Times.Once());
             result.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
 
         }
@@ -534,6 +534,12 @@ namespace Restaurants.API.Controllers.Tests
 
 
 
+        }
+
+        [Fact()]
+        public void UpdateDishById_ForValidRequest_Return204NoContent()
+        {
+            Xunit.Assert.Fail("This test needs an implementation");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Domain.Constants;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
 using Restaurants.Domain.Interfaces;
@@ -52,6 +53,11 @@ namespace Restaurants.Application.Dishes.Commands.DeleteDishById
             {
                 throw new NotFoundException(nameof(Dish), request.DishId.ToString());
 
+            }
+
+            if (!_restaurantAuthorizationService.Authorize(restaurant, ResourceOperation.Delete))
+            {
+                throw new ForbidException();
             }
 
             await _dishRepository.Delete(dishToDelete);
