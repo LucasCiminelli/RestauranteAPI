@@ -21,6 +21,8 @@ using Restaurants.Domain.Constants;
 using System.Net.Http.Json;
 using FluentAssertions;
 using Restaurants.Application.Dishes.Dtos;
+using Restaurants.Application.Dishes.Commands.UpdateDishById;
+using Restaurants.Application.Dishes.Commands.DeleteDishById;
 
 namespace Restaurants.API.Controllers.Tests
 {
@@ -537,9 +539,562 @@ namespace Restaurants.API.Controllers.Tests
         }
 
         [Fact()]
-        public void UpdateDishById_ForValidRequest_Return204NoContent()
+        public async Task UpdateDishById_ForValidRequest_Return204NoContent()
         {
-            Xunit.Assert.Fail("This test needs an implementation");
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 1,
+                Name = "Changed",
+                Description = "Changed",
+                KiloCalories = 150,
+                Price = 15.50M,
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(true);
+            _dishRepositoryMock.Setup(d => d.Update(It.IsAny<Dish>()));
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+            _restaurantsRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            _authorizationServiceMock.Verify(a => a.Authorize(restaurant, ResourceOperation.Update), Times.Once());
+            _dishRepositoryMock.Verify(d => d.Update(It.IsAny<Dish>()), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
+        }
+
+        [Fact()]
+        public async Task UpdateDishById_ForInvalidRequest_Return400BadRequest()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 1,
+                Name = "c",
+                Description = "c",
+                KiloCalories = -1,
+                Price = 1500
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(true);
+            _dishRepositoryMock.Setup(d => d.Update(It.IsAny<Dish>()));
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+        }
+
+        [Fact()]
+        public async Task UpdateDishById_ForUnautorhizedUser_Return403BadRequest()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 1,
+                Name = "Test",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 15.00M
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(false);
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
+        }
+
+        [Fact()]
+        public async Task UpdateDishById_ForNonExistingRestaurant_Return404NotFound()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 1,
+                Name = "Test",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 15.00M
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync((Restaurant?)null);
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+        }
+
+        [Fact()]
+        public async Task UpdateDishById_ForNonExistingDishForRestaurant_Return404NotFound()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = 300,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 2,
+                Name = "Test",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 15.00M
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(true);
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+        }
+
+        [Fact()]
+        public async Task UpdateDishById_ForNonExistingDishesProperty_Return500InternalServerError()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+            };
+
+            var updateCommand = new UpdateDishByIdCommand
+            {
+                RestaurantId = restaurantId,
+                DishId = 1,
+                Name = "Changed",
+                Description = "Changed",
+                KiloCalories = 150,
+                Price = 15.50M,
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.PatchAsJsonAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}", updateCommand);
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.InternalServerError);
+        }
+
+        [Fact()]
+        public async Task DeleteById_ForValidRequest_Return204NoContent()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Delete)).Returns(true);
+            _dishRepositoryMock.Setup(d => d.Delete(It.IsAny<Dish>()));
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.DeleteAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}");
+
+
+            //assert
+
+            _restaurantsRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            _authorizationServiceMock.Verify(a => a.Authorize(restaurant, ResourceOperation.Delete), Times.Once());
+            _dishRepositoryMock.Verify(d => d.Delete(It.IsAny<Dish>()), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
+        }
+
+        [Fact()]
+        public async Task DeleteById_WithNonExistingRestaurant_Return404NotFound()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync((Restaurant?)null);
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.DeleteAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}");
+
+
+            //assert
+
+            
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+        }
+
+        [Fact()]
+        public async Task DeleteById_WithNonExistingDish_Return404NotFound()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 2;
+
+            var dish = new Dish
+            {
+                Id = 1,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.DeleteAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}");
+
+
+            //assert
+
+
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+        }
+
+        [Fact()]
+        public async Task DeleteById_ForUnauthorizedUser_Return403Forbidden()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+                Dishes = new List<Dish>()
+                {
+                    dish
+                }
+            };
+
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+            _authorizationServiceMock.Setup(a => a.Authorize(restaurant, ResourceOperation.Delete)).Returns(false);
+            _dishRepositoryMock.Setup(d => d.Delete(It.IsAny<Dish>()));
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.DeleteAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}");
+
+
+            //assert
+
+            _restaurantsRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
+        }
+
+        [Fact()]
+        public async Task DeleteById_FornonExistingDishesProperty_Return500InternalServerError()
+        {
+            //arrange
+
+            var restaurantId = 1;
+            var dishId = 1;
+
+            var dish = new Dish
+            {
+                Id = dishId,
+                Name = "Pizza",
+                Description = "Test",
+                KiloCalories = 100,
+                Price = 12.50M,
+                RestaurantId = restaurantId
+            };
+
+            var restaurant = new Restaurant()
+            {
+                Id = restaurantId,
+            };
+
+
+            _restaurantsRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+
+
+            var client = _factory.CreateClient();
+
+
+            //act
+
+            var result = await client.DeleteAsync($"/api/restaurants/{restaurantId}/dishes/{dishId}");
+
+
+            //assert
+
+            _restaurantsRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.InternalServerError);
         }
     }
 }
