@@ -3,44 +3,16 @@
   "WorkspaceRootPath": "C:\\Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurant\\tests\\restaurants.apitests\\controllers\\dishescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\controllers\\dishescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\src\\restaurants.infrastructure\\authorization\\authorizationservices\\restaurantauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:src\\restaurants.infrastructure\\authorization\\authorizationservices\\restaurantauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\src\\restaurants.api\\restaurants.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|solutionrelative:src\\restaurants.api\\restaurants.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|c:\\restaurant\\tests\\restaurants.infrastructuretests\\authorization\\requirements\\minimumagerequirementhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|solutionrelative:tests\\restaurants.infrastructuretests\\authorization\\requirements\\minimumagerequirementhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\users\\commands\\assignuserrole\\assignuserrolecommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|solutionrelative:tests\\restaurants.applicationtests\\users\\commands\\assignuserrole\\assignuserrolecommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\users\\currentusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|solutionrelative:tests\\restaurants.applicationtests\\users\\currentusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\users\\usercontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|solutionrelative:tests\\restaurants.applicationtests\\users\\usercontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\users\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\users\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\users\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\users\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|solutionrelative:tests\\restaurants.applicationtests\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\users\\commands\\unnasignuserrole\\unassignuserrolecommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|solutionrelative:tests\\restaurants.applicationtests\\users\\commands\\unnasignuserrole\\unassignuserrolecommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\src\\restaurants.infrastructure\\authorization\\requirements\\minimumagerequirementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:src\\restaurants.infrastructure\\authorization\\requirements\\minimumagerequirementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,98 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RestaurantAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "RelativeToolTip": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T17:47:17.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Restaurants.API",
-              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.API\\Restaurants.API.csproj",
-              "RelativeDocumentMoniker": "src\\Restaurants.API\\Restaurants.API.csproj",
-              "ToolTip": "C:\\Restaurant\\src\\Restaurants.API\\Restaurants.API.csproj",
-              "RelativeToolTip": "src\\Restaurants.API\\Restaurants.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-01T14:09:53.822Z",
+              "Title": "MinimumAgeRequirementHandlerTests.cs",
+              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB8AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T17:13:24.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AssignUserRoleCommandHandlerTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandlerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandlerTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandlerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandlerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:02:13.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DishesControllerTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAADwvywAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:52:54.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserContextTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\UserContextTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Users\\UserContextTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\UserContextTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Users\\UserContextTests.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:42:31.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CurrentUserTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\CurrentUserTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Users\\CurrentUserTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\CurrentUserTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Users\\CurrentUserTests.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:48:55.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateUserDetailsCommandHandlerTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandlerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandlerTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandlerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandlerTests.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAkwCMAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T12:57:16.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnassignUserRoleCommandHandlerTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandlerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandlerTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandlerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Users\\Commands\\UnnasignUserRole\\UnassignUserRoleCommandHandlerTests.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAASwCYAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T12:49:12.976Z"
             }
           ]
         },
@@ -175,80 +86,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "461837d6-9471-4e73-9a71-26827b2ad083",
+        "Id": "f18d4d52-808f-4e13-8a37-38bcb2518904",
         "Display": 1,
-        "X": 530,
-        "Y": 98,
-        "Width": 1020,
-        "Height": 686,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UpdateUserDetailsCommandHandler.cs",
-              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
-              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
-              "RelativeToolTip": "src\\Restaurants.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T12:57:43.294Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "cac5d301-44d9-4401-977e-b71c96ac3620",
-        "Display": 1,
-        "X": 904,
-        "Y": 9,
-        "Width": 1020,
-        "Height": 686,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserContext.cs",
-              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\UserContext.cs",
-              "RelativeDocumentMoniker": "src\\Restaurants.Application\\Users\\UserContext.cs",
-              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\UserContext.cs",
-              "RelativeToolTip": "src\\Restaurants.Application\\Users\\UserContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:07:14.059Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "4cc97626-48ac-43ef-84a8-6a3bf283b3c7",
-        "Display": 1,
-        "X": 367,
-        "Y": 60,
+        "X": 439,
+        "Y": 76,
         "Width": 1571,
-        "Height": 686,
+        "Height": 651,
         "WindowState": 2
       },
       "DocumentGroups": [
@@ -258,15 +101,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CurrentUser.cs",
-              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\CurrentUser.cs",
-              "RelativeDocumentMoniker": "src\\Restaurants.Application\\Users\\CurrentUser.cs",
-              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Application\\Users\\CurrentUser.cs",
-              "RelativeToolTip": "src\\Restaurants.Application\\Users\\CurrentUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MinimumAgeRequirementHandler.cs",
+              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
+              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
+              "RelativeToolTip": "src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:49:04.799Z",
+              "WhenOpened": "2025-04-01T17:08:45.356Z",
               "EditorCaption": ""
             }
           ]
