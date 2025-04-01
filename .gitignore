@@ -16,3 +16,5 @@ Restaurants.API/appsettings.Development.json
 appsettings.Development.json
 appsettings.json
 secrets.json
+tests/Restaurants.APITests/TestResults/
+
