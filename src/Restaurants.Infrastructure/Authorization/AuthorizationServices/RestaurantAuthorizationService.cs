@@ -28,12 +28,17 @@ namespace Restaurants.Infrastructure.Authorization.AuthorizationServices
 
             var user = _userContext.GetCurrentUser();
 
+            if (user == null)
+            {
+                return false; 
+            }
+
 
             _logger.LogInformation("Authorizng user {UserEmail}, to {Operation} for restaurant {RestaurantName}", user!.Email, resourceOperation, restaurant.Name);
 
 
 
-              if (resourceOperation == ResourceOperation.Read || resourceOperation == ResourceOperation.Create)
+            if (resourceOperation == ResourceOperation.Read || resourceOperation == ResourceOperation.Create)
             {
                 _logger.LogInformation("Create/Read opereacion - successfull authorization");
                 return true;
@@ -45,6 +50,7 @@ namespace Restaurants.Infrastructure.Authorization.AuthorizationServices
                 return true;
 
             }
+
             if ((resourceOperation == ResourceOperation.Delete || resourceOperation == ResourceOperation.Update) && user.Id == restaurant.OwnerId)
             {
                 _logger.LogInformation("Restaurant owner - successfull authorization");

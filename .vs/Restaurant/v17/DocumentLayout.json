@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Restaurant\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|c:\\restaurant\\tests\\restaurants.infrastructuretests\\authorization\\authorizationservices\\restaurantauthorizationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|solutionrelative:tests\\restaurants.infrastructuretests\\authorization\\authorizationservices\\restaurantauthorizationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\src\\restaurants.infrastructure\\authorization\\authorizationservices\\restaurantauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:src\\restaurants.infrastructure\\authorization\\authorizationservices\\restaurantauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,27 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RestaurantAuthorizationService.cs",
-              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
-              "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
-              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
-              "RelativeToolTip": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Title": "RestaurantAuthorizationServiceTests.cs",
+              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\AuthorizationServices\\RestaurantAuthorizationServiceTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.InfrastructureTests\\Authorization\\AuthorizationServices\\RestaurantAuthorizationServiceTests.cs",
+              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\AuthorizationServices\\RestaurantAuthorizationServiceTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.InfrastructureTests\\Authorization\\AuthorizationServices\\RestaurantAuthorizationServiceTests.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAA+wJ0AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T17:47:17.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MinimumAgeRequirementHandlerTests.cs",
-              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
-              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB8AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T17:13:24.762Z",
+              "WhenOpened": "2025-04-01T17:55:15.311Z",
               "EditorCaption": ""
             },
             {
@@ -101,7 +92,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MinimumAgeRequirementHandler.cs",
               "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
               "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\Requirements\\MinimumAgeRequirementHandler.cs",
@@ -110,6 +101,74 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T17:08:45.356Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "014615bc-8622-43e3-bba1-25576e1a1233",
+        "Display": 1,
+        "X": 578,
+        "Y": 101,
+        "Width": 1571,
+        "Height": 651,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MinimumAgeRequirementHandlerTests.cs",
+              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.InfrastructureTests\\Authorization\\Requirements\\MinimumAgeRequirementHandlerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T17:13:24.762Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "8a6f8b88-ff0b-42bf-80ca-6cf53850e9ac",
+        "Display": 1,
+        "X": 132,
+        "Y": 7,
+        "Width": 1571,
+        "Height": 783,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestaurantAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "RelativeToolTip": "src\\Restaurants.Infrastructure\\Authorization\\AuthorizationServices\\RestaurantAuthorizationService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwCEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T17:47:17.933Z",
               "EditorCaption": ""
             }
           ]
