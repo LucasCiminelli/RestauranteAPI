@@ -56,7 +56,7 @@ namespace Restaurants.Application.Users.Tests
         }
 
         [Fact()]
-        public void IsInRole_WithNoMatchingRoleCase_ShouldReturnFalse()
+        public void IsInRole_WithNoMatchingRoleToLowerCase_ShouldReturnFalse()
         {
 
             //arrange
@@ -67,6 +67,27 @@ namespace Restaurants.Application.Users.Tests
             //act
 
             var isInRole = currentUser.IsInRole(UserRoles.Admin.ToLower());
+
+
+            //assert
+
+            isInRole.Should().BeFalse();
+
+
+        }
+
+        [Fact()]
+        public void IsInRole_WithNoMatchingRoleToUpperCase_ShouldReturnFalse()
+        {
+
+            //arrange
+
+            var currentUser = new CurrentUser("1", "test@test.com", [UserRoles.Admin, UserRoles.User], null, null);
+
+
+            //act
+
+            var isInRole = currentUser.IsInRole(UserRoles.Admin.ToUpper());
 
 
             //assert

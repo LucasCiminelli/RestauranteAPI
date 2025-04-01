@@ -18,5 +18,7 @@
 		<PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
 	</ItemGroup>
-
+	<ItemGroup>
+		<InternalsVisibleTo Include="Restaurants.APITests" />
+	</ItemGroup>
 </Project>

@@ -26,6 +26,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\Restaurants.API\Restaurants.API.csproj" />
+		<ProjectReference Include="..\..\src\Restaurants.Application\Restaurants.Application.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

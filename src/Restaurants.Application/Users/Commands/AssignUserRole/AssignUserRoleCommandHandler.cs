@@ -36,8 +36,8 @@ namespace Restaurants.Application.Users.Commands.AssignUserRole
                 ?? throw new NotFoundException(nameof(IdentityRole), request.RoleName!);
 
 
-            await _userManager.AddToRoleAsync(user,role.Name!);
-            
+            await _userManager.AddToRoleAsync(user, role.Name!);
+
         }
     }
 }
