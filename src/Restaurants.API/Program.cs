@@ -8,48 +8,62 @@ using Restaurants.Infrastructure.Seeders;
 using Serilog;
 using Serilog.Events;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-
-builder.AddPresentation();
-builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration);
-
-
-
-var app = builder.Build();
-
-//executing seeders
-var scope = app.Services.CreateScope();
-var seeder = scope.ServiceProvider.GetRequiredService<IRestaurantSeeder>();
-
-await seeder.Seed();
-
-app.UseMiddleware<ErrorHandlingMiddleware>(); //using error middleware
-app.UseMiddleware<RequestTimeLoggingMiddleware>();
-
-app.UseSerilogRequestLogging();
-
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Add services to the container.
+
+
+    builder.AddPresentation();
+    builder.Services.AddApplication();
+    builder.Services.AddInfrastructure(builder.Configuration);
+
+
+
+    var app = builder.Build();
+
+    //executing seeders
+    var scope = app.Services.CreateScope();
+    var seeder = scope.ServiceProvider.GetRequiredService<IRestaurantSeeder>();
+
+    await seeder.Seed();
+
+    app.UseMiddleware<ErrorHandlingMiddleware>(); //using error middleware
+    app.UseMiddleware<RequestTimeLoggingMiddleware>();
+
+    app.UseSerilogRequestLogging();
+
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
+
+    // Configure the HTTP request pipeline.
+
+    app.UseHttpsRedirection();
+
+    app.MapGroup("api/auth")
+        .WithTags("Auth")
+        .MapIdentityApi<User>();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
+}
+catch (Exception ex)
+{
+
+    Log.Fatal(ex, "application startup failed");
+}
+finally
+{
+    Log.CloseAndFlush();
 }
 
-// Configure the HTTP request pipeline.
-
-app.UseHttpsRedirection();
-
-app.MapGroup("api/auth")
-    .WithTags("Auth")
-    .MapIdentityApi<User>();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
 
 public partial class Program { }
