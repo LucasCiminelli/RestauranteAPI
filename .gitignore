@@ -17,4 +17,8 @@ appsettings.Development.json
 appsettings.json
 secrets.json
 tests/Restaurants.APITests/TestResults/
+.vs/Restaurant/v17/.futdcache.v2
+.vs/Restaurant/v17/DocumentLayout.backup.json
+.vs/Restaurant/v17/DocumentLayout.json
+
 
