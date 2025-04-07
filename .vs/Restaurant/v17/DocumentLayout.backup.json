@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Restaurant\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurant\\tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|c:\\restaurant\\src\\restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|solutionrelative:src\\restaurants.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|c:\\restaurant\\tests\\restaurants.infrastructuretests\\authorization\\restaurantsuserclaimsprincipalfactorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1C4C8AC-B7EF-F67E-2B14-B114D820716D}|tests\\Restaurants.InfrastructureTests\\Restaurants.InfrastructureTests.csproj|solutionrelative:tests\\restaurants.infrastructuretests\\authorization\\restaurantsuserclaimsprincipalfactorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|c:\\restaurant\\src\\restaurants.infrastructure\\authorization\\restaurantsuserclaimsprincipalfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE26A72D-0757-3D84-C2C2-58247A49A6CF}|src\\Restaurants.Infrastructure\\Restaurants.Infrastructure.csproj|solutionrelative:src\\restaurants.infrastructure\\authorization\\restaurantsuserclaimsprincipalfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|c:\\restaurant\\src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFEDB2AB-A54A-CEDE-88B8-6EA93CEC4242}|src\\Restaurants.Application\\Restaurants.Application.csproj|solutionrelative:src\\restaurants.application\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{826C7AEA-282B-5F36-03C7-A7EA7566DB14}|tests\\Restaurants.ApplicationTests\\Restaurants.ApplicationTests.csproj|c:\\restaurant\\tests\\restaurants.applicationtests\\restaurants\\commands\\uploadrestaurantlogo\\uploadrestaurantlogocommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UploadRestaurantLogoCommand.cs",
+              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommand.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommand.cs",
+              "ToolTip": "C:\\Restaurant\\src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommand.cs",
+              "RelativeToolTip": "src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T18:04:01.875Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -35,19 +60,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RestaurantsControllerTests.cs",
+              "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "ToolTip": "C:\\Restaurant\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "ViewState": "AgIAAPQBAAAAAAAAAAAAwOgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:55:07.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RestaurantsUserClaimsPrincipalFactoryTests.cs",
               "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\RestaurantsUserClaimsPrincipalFactoryTests.cs",
               "RelativeDocumentMoniker": "tests\\Restaurants.InfrastructureTests\\Authorization\\RestaurantsUserClaimsPrincipalFactoryTests.cs",
               "ToolTip": "C:\\Restaurant\\tests\\Restaurants.InfrastructureTests\\Authorization\\RestaurantsUserClaimsPrincipalFactoryTests.cs",
               "RelativeToolTip": "tests\\Restaurants.InfrastructureTests\\Authorization\\RestaurantsUserClaimsPrincipalFactoryTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwB4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T15:51:47.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "UploadRestaurantLogoCommandHandlerTests.cs",
               "DocumentMoniker": "C:\\Restaurant\\tests\\Restaurants.ApplicationTests\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandlerTests.cs",
               "RelativeDocumentMoniker": "tests\\Restaurants.ApplicationTests\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandlerTests.cs",
@@ -55,8 +93,7 @@
               "RelativeToolTip": "tests\\Restaurants.ApplicationTests\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandlerTests.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAwwCoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:44:27.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T14:44:27.116Z"
             }
           ]
         },
@@ -111,7 +148,7 @@
               "RelativeDocumentMoniker": "src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandler.cs",
               "ToolTip": "C:\\Restaurant\\src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandler.cs",
               "RelativeToolTip": "src\\Restaurants.Application\\Restaurants\\Commands\\UploadRestaurantLogo\\UploadRestaurantLogoCommandHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADAAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T14:16:51.573Z",
               "EditorCaption": ""
@@ -139,7 +176,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "RestaurantsUserClaimsPrincipalFactory.cs",
               "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.Infrastructure\\Authorization\\RestaurantsUserClaimsPrincipalFactory.cs",
               "RelativeDocumentMoniker": "src\\Restaurants.Infrastructure\\Authorization\\RestaurantsUserClaimsPrincipalFactory.cs",
@@ -148,6 +185,40 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T15:46:19.51Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "30234788-8994-4b4f-8dd1-b6b7a815ab05",
+        "Display": 1,
+        "X": 384,
+        "Y": 222,
+        "Width": 1571,
+        "Height": 692,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestaurantsController.cs",
+              "DocumentMoniker": "C:\\Restaurant\\src\\Restaurants.API\\Controllers\\RestaurantsController.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.API\\Controllers\\RestaurantsController.cs",
+              "ToolTip": "C:\\Restaurant\\src\\Restaurants.API\\Controllers\\RestaurantsController.cs",
+              "RelativeToolTip": "src\\Restaurants.API\\Controllers\\RestaurantsController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAxwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:53:27.274Z",
               "EditorCaption": ""
             }
           ]

@@ -27,6 +27,7 @@ using Restaurants.Domain.Interfaces;
 using Restaurants.Domain.Constants;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
+using Microsoft.AspNetCore.Http;
 
 namespace Restaurants.API.Controllers.Tests
 {
@@ -38,6 +39,7 @@ namespace Restaurants.API.Controllers.Tests
         private readonly Mock<IRestaurantRepository> _restarantRepositoryMock = new();
         private readonly Mock<IUserContext> _userContextMock = new();
         private readonly Mock<IRestaurantAuthorizationService> _restaurantAuthorizationService = new();
+        private readonly Mock<IBlobStorageService> _blobStorageServiceMock = new();
 
         public RestaurantsControllerTests(WebApplicationFactory<Program> factory)
         {
@@ -52,6 +54,7 @@ namespace Restaurants.API.Controllers.Tests
                     services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantRepository), _ => _restarantRepositoryMock.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IUserContext), _ => _userContextMock.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantAuthorizationService), _ => _restaurantAuthorizationService.Object));
+                    services.Replace(ServiceDescriptor.Scoped(typeof(IBlobStorageService), _ => _blobStorageServiceMock.Object));
                 });
             });
         }
@@ -448,7 +451,7 @@ namespace Restaurants.API.Controllers.Tests
         }
 
         [Fact()]
-        public async Task Delete_ForNonExistingRestaurant_ReturnStatus403Forbidden()
+        public async Task Delete_ForUnauthorizedUser_ReturnStatus403Forbidden()
         {
 
             //arrange
@@ -483,6 +486,121 @@ namespace Restaurants.API.Controllers.Tests
             _restaurantAuthorizationService.Verify(a => a.Authorize(restaurant, ResourceOperation.Delete), Times.Once());
             result.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
 
+
+        }
+
+        [Fact()]
+        public async Task CreateLogo_ForValidRequest_ShouldReturn204NoContent()
+        {
+
+
+            var restaurantId = 1;
+
+            var restaurant = new Restaurant
+            {
+                Id = restaurantId,
+                Name = "Test",
+                Description = "Test"
+            };
+
+            _restarantRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+
+            _restaurantAuthorizationService.Setup(a => a.Authorize(restaurant, ResourceOperation.Delete)).Returns(false);
+
+            _blobStorageServiceMock.Setup(b => b.UploadToBlobAsync(It.IsAny<Stream>(), It.IsAny<string>()))
+            .ReturnsAsync("https://fakeurl.com/logo.jpg");
+
+            var content = new MultipartFormDataContent();
+
+            var fileContent = new ByteArrayContent(Encoding.UTF8.GetBytes("fake-content"));
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+
+            content.Add(fileContent, "file", "logo.jpg");
+
+            var client = _factory.CreateClient();
+
+            var result = await client.PostAsync($"/api/restaurants/{restaurantId}/logo", content);
+
+
+            _restarantRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            _restaurantAuthorizationService.Verify(a => a.Authorize(restaurant, ResourceOperation.Update), Times.Once());
+            _blobStorageServiceMock.Setup(b => b.UploadToBlobAsync(It.IsAny<Stream>(), It.IsAny<string>()))
+            .ReturnsAsync("https://fakeurl.com/logo.jpg");
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
+
+        }
+
+        [Fact()]
+        public async Task CreateLogo_ForNonExistingRestaurant_ShouldReturn404NotFound()
+        {
+
+
+            var restaurantId = 1;
+
+            var restaurant = new Restaurant
+            {
+                Id = restaurantId,
+                Name = "Test",
+                Description = "Test"
+            };
+
+            _restarantRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync((Restaurant?)null);
+
+           
+
+            var content = new MultipartFormDataContent();
+
+            var fileContent = new ByteArrayContent(Encoding.UTF8.GetBytes("fake-content"));
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+
+            content.Add(fileContent, "file", "logo.jpg");
+
+            var client = _factory.CreateClient();
+
+            var result = await client.PostAsync($"/api/restaurants/{restaurantId}/logo", content);
+
+
+            _restarantRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
+
+        }
+
+        [Fact()]
+        public async Task CreateLogo_ForUnauthorizedUser_ShouldReturn403Forbidden()
+        {
+
+
+            var restaurantId = 1;
+
+            var restaurant = new Restaurant
+            {
+                Id = restaurantId,
+                Name = "Test",
+                Description = "Test"
+            };
+
+            _restarantRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
+
+            _restaurantAuthorizationService.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(false);
+
+          
+
+            var content = new MultipartFormDataContent();
+
+            var fileContent = new ByteArrayContent(Encoding.UTF8.GetBytes("fake-content"));
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+
+            content.Add(fileContent, "file", "logo.jpg");
+
+            var client = _factory.CreateClient();
+
+            var result = await client.PostAsync($"/api/restaurants/{restaurantId}/logo", content);
+
+
+            _restarantRepositoryMock.Verify(r => r.GetByIdAsync(restaurantId), Times.Once());
+            _restaurantAuthorizationService.Verify(a => a.Authorize(restaurant, ResourceOperation.Update), Times.Once());
+            
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
 
         }
     }
