@@ -5,6 +5,7 @@ using Restaurants.Application.Restaurants;
 using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
 using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
 using Restaurants.Application.Restaurants.Commands.UpdateRestaurant;
+using Restaurants.Application.Restaurants.Commands.UploadRestaurantLogo;
 using Restaurants.Application.Restaurants.Dtos;
 using Restaurants.Application.Restaurants.Queries.GetAllRestaurants;
 using Restaurants.Application.Restaurants.Queries.GetRestaurantById;
@@ -40,7 +41,7 @@ namespace Restaurants.API.Controllers
 
 
         [HttpGet("{id}", Name = "GetById")]
-        [Authorize(Policy = PolicyNames.HasNationality)]
+        //[Authorize(Policy = PolicyNames.HasNationality)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(RestaurantDTO))]
         public async Task<ActionResult<RestaurantDTO>> GetById([FromRoute] int id)
         {
@@ -55,7 +56,6 @@ namespace Restaurants.API.Controllers
 
 
         [HttpPost]
-      
         public async Task<IActionResult> CreateRestaurant(CreateRestaurantCommand request)
         {
             int id = await _mediator.Send(request);
@@ -106,6 +106,25 @@ namespace Restaurants.API.Controllers
 
             return NoContent();
 
+        }
+
+
+        [HttpPost("{id}/logo")]
+        public  async Task<IActionResult> CreateLogo([FromRoute] int id, IFormFile file)
+        {
+
+            var stream = file.OpenReadStream();
+
+            var command = new UploadRestaurantLogoCommand()
+            {
+                RestaurantId = id,
+                FileName = file.FileName,
+                File = stream
+            };
+
+            await _mediator.Send(command);
+
+            return NoContent();
         }
 
     }
