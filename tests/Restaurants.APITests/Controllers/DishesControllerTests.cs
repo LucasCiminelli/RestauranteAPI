@@ -26,7 +26,6 @@ using Restaurants.Application.Dishes.Commands.DeleteDishById;
 
 namespace Restaurants.API.Controllers.Tests
 {
-    [TestClass()]
     public class DishesControllerTests : IClassFixture<WebApplicationFactory<Program>>
     {
 
