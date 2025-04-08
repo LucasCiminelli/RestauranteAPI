@@ -41,7 +41,7 @@ namespace Restaurants.API.Controllers.Tests
         private readonly Mock<IUserContext> _userContextMock = new();
         private readonly Mock<IRestaurantAuthorizationService> _restaurantAuthorizationService = new();
         private readonly Mock<IBlobStorageService> _blobStorageServiceMock = new();
-        private readonly Mock<IRestaurantSeeder> _restaurantSeederMock = new();
+        //private readonly Mock<IRestaurantSeeder> _restaurantSeederMock = new();
 
         public RestaurantsControllerTests(WebApplicationFactory<Program> factory)
         {
@@ -57,7 +57,7 @@ namespace Restaurants.API.Controllers.Tests
                     services.Replace(ServiceDescriptor.Scoped(typeof(IUserContext), _ => _userContextMock.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantAuthorizationService), _ => _restaurantAuthorizationService.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IBlobStorageService), _ => _blobStorageServiceMock.Object));
-                    services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantSeeder), _ => _restaurantSeederMock.Object));
+                    //services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantSeeder), _ => _restaurantSeederMock.Object));
                 });
             });
         }
@@ -606,5 +606,7 @@ namespace Restaurants.API.Controllers.Tests
             result.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
 
         }
+
+
     }
 }
