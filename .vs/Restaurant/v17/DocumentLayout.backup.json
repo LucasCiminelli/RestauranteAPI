@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\RestaurantApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurantapi\\tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurantapi\\tests\\restaurants.apitests\\restaurants.apitests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\restaurants.apitests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\src\\restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|solutionrelative:src\\restaurants.api\\restaurants.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurantapi\\tests\\restaurants.apitests\\controllers\\dishescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\controllers\\dishescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|c:\\restaurantapi\\src\\restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE6051AE-B6D6-8202-9D97-06FDEF77DEC7}|src\\Restaurants.API\\Restaurants.API.csproj|solutionrelative:src\\restaurants.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|c:\\restaurantapi\\tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A815DC-4107-C185-9FC9-08604294DADF}|tests\\Restaurants.APITests\\Restaurants.APITests.csproj|solutionrelative:tests\\restaurants.apitests\\controllers\\restaurantscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +26,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RestaurantsControllerTests.cs",
-              "DocumentMoniker": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
-              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
-              "ToolTip": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
-              "RelativeToolTip": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
-              "ViewState": "AgIAAOkBAAAAAAAAAAAewAICAABbAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DishesControllerTests.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
+              "ToolTip": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.APITests\\Controllers\\DishesControllerTests.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAawBoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T02:13:08.674Z",
+              "WhenOpened": "2025-04-08T15:51:16.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Restaurants.APITests",
+              "DocumentMoniker": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Restaurants.APITests.csproj",
+              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Restaurants.APITests.csproj",
+              "ToolTip": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Restaurants.APITests.csproj",
+              "RelativeToolTip": "tests\\Restaurants.APITests\\Restaurants.APITests.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T15:48:40.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\src\\Restaurants.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Restaurants.API\\Program.cs",
+              "ToolTip": "C:\\RestaurantApi\\src\\Restaurants.API\\Program.cs",
+              "RelativeToolTip": "src\\Restaurants.API\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwEQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T15:27:16.166Z",
               "EditorCaption": ""
             },
             {
@@ -39,15 +73,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Restaurants.API.http",
-              "DocumentMoniker": "C:\\RestaurantApi\\src\\Restaurants.API\\Restaurants.API.http",
-              "RelativeDocumentMoniker": "src\\Restaurants.API\\Restaurants.API.http",
-              "ToolTip": "C:\\RestaurantApi\\src\\Restaurants.API\\Restaurants.API.http",
-              "RelativeToolTip": "src\\Restaurants.API\\Restaurants.API.http",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAxwFwAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-04-07T23:01:10.814Z",
+              "DocumentIndex": 3,
+              "Title": "RestaurantsControllerTests.cs",
+              "DocumentMoniker": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "ToolTip": "C:\\RestaurantApi\\tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "RelativeToolTip": "tests\\Restaurants.APITests\\Controllers\\RestaurantsControllerTests.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:45:39.206Z",
               "EditorCaption": ""
             }
           ]

@@ -29,6 +29,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
 using Microsoft.AspNetCore.Http;
 using Restaurants.Infrastructure.Seeders;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Restaurants.API.Controllers.Tests
 {
@@ -47,9 +48,10 @@ namespace Restaurants.API.Controllers.Tests
         {
             _factory = factory.WithWebHostBuilder(builder =>
             {
+                builder.UseEnvironment("Test");
                 builder.ConfigureTestServices(services =>
                 {
-
+                    
                     _userContextMock.Setup(c => c.GetCurrentUser()).Returns(new CurrentUser("1", "test@example.com", ["Admin", "Owner"], null, null));
 
                     services.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
