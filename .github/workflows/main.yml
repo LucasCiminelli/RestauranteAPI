@@ -25,3 +25,5 @@ jobs:
         run: dotnet build --no-restore
       - name: Test
         run: dotnet test
+        env:
+          ASPNETCORE_ENVIRONMENT: Development
