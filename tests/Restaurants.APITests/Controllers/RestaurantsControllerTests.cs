@@ -28,6 +28,7 @@ using Restaurants.Domain.Constants;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
 using Microsoft.AspNetCore.Http;
+using Restaurants.Infrastructure.Seeders;
 
 namespace Restaurants.API.Controllers.Tests
 {
@@ -40,6 +41,7 @@ namespace Restaurants.API.Controllers.Tests
         private readonly Mock<IUserContext> _userContextMock = new();
         private readonly Mock<IRestaurantAuthorizationService> _restaurantAuthorizationService = new();
         private readonly Mock<IBlobStorageService> _blobStorageServiceMock = new();
+        private readonly Mock<IRestaurantSeeder> _restaurantSeederMock = new();
 
         public RestaurantsControllerTests(WebApplicationFactory<Program> factory)
         {
@@ -55,6 +57,7 @@ namespace Restaurants.API.Controllers.Tests
                     services.Replace(ServiceDescriptor.Scoped(typeof(IUserContext), _ => _userContextMock.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantAuthorizationService), _ => _restaurantAuthorizationService.Object));
                     services.Replace(ServiceDescriptor.Scoped(typeof(IBlobStorageService), _ => _blobStorageServiceMock.Object));
+                    services.Replace(ServiceDescriptor.Scoped(typeof(IRestaurantSeeder), _ => _restaurantSeederMock.Object));
                 });
             });
         }
@@ -505,7 +508,7 @@ namespace Restaurants.API.Controllers.Tests
 
             _restarantRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync(restaurant);
 
-            _restaurantAuthorizationService.Setup(a => a.Authorize(restaurant, ResourceOperation.Delete)).Returns(false);
+            _restaurantAuthorizationService.Setup(a => a.Authorize(restaurant, ResourceOperation.Update)).Returns(true);
 
             _blobStorageServiceMock.Setup(b => b.UploadToBlobAsync(It.IsAny<Stream>(), It.IsAny<string>()))
             .ReturnsAsync("https://fakeurl.com/logo.jpg");
