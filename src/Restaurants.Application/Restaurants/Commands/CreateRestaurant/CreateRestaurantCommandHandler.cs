@@ -33,6 +33,11 @@ namespace Restaurants.Application.Restaurants.Commands.CreateRestaurant
 
             var currentUser = _userContext.GetCurrentUser();
 
+            if(currentUser == null)
+            {
+                throw new UnauthorizedAccessException("User must be authenticated");
+            }
+
             _logger.LogInformation("{UserEmail} [{UserId}] is creating a new Restaurant {Restaurant}", currentUser!.Email, currentUser.Id, request);
 
             var restaurant = _mapper.Map<Restaurant>(request);
