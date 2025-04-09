@@ -25,10 +25,11 @@ namespace Restaurants.Application.Users
         public CurrentUser GetCurrentUser()
         {
             var user = _contextAccessor?.HttpContext?.User;
+
             if (user == null)
             {
 
-                throw new InvalidOperationException("User context is not present");
+                return null!;
             }
 
             if (user.Identity == null || !user.Identity.IsAuthenticated)

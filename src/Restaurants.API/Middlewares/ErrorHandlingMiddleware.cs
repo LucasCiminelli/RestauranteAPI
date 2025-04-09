@@ -32,6 +32,12 @@ namespace Restaurants.API.Middlewares
                 context.Response.StatusCode = 403;
                 await context.Response.WriteAsync($"Access Forbidden");
             }
+            catch(UnauthorizedAccessException unauthorizedException)
+            {
+                _logger.LogWarning(unauthorizedException, unauthorizedException.Message);
+                context.Response.StatusCode = 401;
+                await context.Response.WriteAsync("Unauthorized User");
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
