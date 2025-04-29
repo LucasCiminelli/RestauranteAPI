@@ -17,6 +17,8 @@ namespace Restaurants.Infrastructure.Persistence
 
         internal DbSet<Restaurant> Restaurants { get; set; }
         internal DbSet<Dish> Dishes { get; set; }
+        internal DbSet<Bipper> Bippers { get; set; }
+        internal DbSet<Client> Clients { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,10 +33,20 @@ namespace Restaurants.Infrastructure.Persistence
                 .WithOne()
                 .HasForeignKey(d => d.RestaurantId);
 
+            modelBuilder.Entity<Restaurant>()
+               .HasMany(r => r.Bippers)
+               .WithOne()
+               .HasForeignKey(b => b.RestaurantId);
+
             modelBuilder.Entity<User>()
                 .HasMany(o => o.OwnedRestaraunts)
                 .WithOne(r => r.Owner)
                 .HasForeignKey(r => r.OwnerId);
+
+            modelBuilder.Entity<Client>()
+              .HasMany(c => c.Bippers)
+              .WithOne(b => b.Client)
+              .HasForeignKey(b => b.ClientId);
         }
 
     }
