@@ -1,5 +1,7 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Application.Clients.Dtos;
 using Restaurants.Application.Users;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
@@ -12,27 +14,29 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Clients.Queries.GetClientById
 {
-    public class GetClientByEmailQueryHandler : IRequestHandler<GetClientByEmailQuery, Client>
+    public class GetClientByEmailQueryHandler : IRequestHandler<GetClientByEmailQuery, ClientDTO>
     {
 
         private readonly IClientRepository _clientRepository;
         private readonly ILogger<GetClientByEmailQueryHandler> _logger;
         private readonly IUserContext _userContext;
+        private readonly IMapper _mapper;
 
-        public GetClientByEmailQueryHandler(IClientRepository clientRepository, ILogger<GetClientByEmailQueryHandler> logger, IUserContext userContext)
+        public GetClientByEmailQueryHandler(IClientRepository clientRepository, ILogger<GetClientByEmailQueryHandler> logger, IUserContext userContext, IMapper mapper)
         {
             _clientRepository = clientRepository;
             _logger = logger;
             _userContext = userContext;
+            _mapper = mapper;
         }
 
-        public async Task<Client> Handle(GetClientByEmailQuery request, CancellationToken cancellationToken)
+        public async Task<ClientDTO> Handle(GetClientByEmailQuery request, CancellationToken cancellationToken)
         {
             var currentUser = _userContext.GetCurrentUser();
 
             if (currentUser == null)
             {
-                throw new UnauthorizedAccessException("User must be authenticated");
+                throw new UnauthorizedAccessException("User Unauthenticated");
             }
 
             var existingUser = await _clientRepository.FindByEmailAsync(request.Email);
@@ -43,7 +47,9 @@ namespace Restaurants.Application.Clients.Queries.GetClientById
             }
 
 
-            return existingUser;
+            var clientDTO = _mapper.Map<ClientDTO>(existingUser);
+
+            return clientDTO;
 
         }
     }

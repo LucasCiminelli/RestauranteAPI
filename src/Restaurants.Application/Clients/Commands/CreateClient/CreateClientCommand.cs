@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Restaurants.Application.Clients.Dtos;
 using Restaurants.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Clients.Commands.CreateClient
 {
-    public class CreateClientCommand : IRequest<Client>
+    public class CreateClientCommand : IRequest<ClientDTO>
     {
 
         public string Nombre { get; set; } = string.Empty;

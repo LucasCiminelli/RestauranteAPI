@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Restaurants.Application.Clients.Dtos;
 using Restaurants.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Clients.Queries.GetClientById
 {
-    public class GetClientByEmailQuery : IRequest<Client>
+    public class GetClientByEmailQuery : IRequest<ClientDTO>
     {
 
         public string Email { get; set; } = string.Empty;
