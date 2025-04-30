@@ -39,7 +39,6 @@ namespace Restaurants.Infrastructure.Persistence
                .HasForeignKey(b => b.RestaurantId)
                .OnDelete(DeleteBehavior.Cascade);
 
-
             modelBuilder.Entity<User>()
                 .HasMany(o => o.OwnedRestaraunts)
                 .WithOne(r => r.Owner)
