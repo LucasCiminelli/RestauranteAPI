@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Clients.Queries.GetClientById
 {
-    public class GetClientByIdQuery : IRequest<Client>
+    public class GetClientByEmailQuery : IRequest<Client>
     {
 
         public string Email { get; set; } = string.Empty;

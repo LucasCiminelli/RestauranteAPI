@@ -44,7 +44,7 @@ namespace Restaurants.Application.Bippers.Commands.CreateBipper
                 Type = request.Type,
                 IsReady = request.IsReady,
                 Status = request.Status,
-                isActive = request.isActive
+                IsActive = request.isActive
             };
 
             await _bipperRepository.CreateAsync(bipper);
