@@ -13,6 +13,8 @@ namespace Restaurants.Application.Bippers.Queries.GetBipperById
     {
 
         public Guid Id { get; set; }
+        public int ClientId { get; set; }
+        public int RestaurantId { get; set; }
 
     }
 }

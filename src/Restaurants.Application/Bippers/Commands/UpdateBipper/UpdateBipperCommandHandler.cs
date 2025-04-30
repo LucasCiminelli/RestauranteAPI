@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using Restaurants.Application.Bippers.Dtos;
+using Restaurants.Application.Common.Interfaces;
 using Restaurants.Application.Users;
 using Restaurants.Domain.Constants;
 using Restaurants.Domain.Entities;
@@ -26,8 +27,10 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
         private readonly IUserContext _userContext;
         private readonly IMapper _mapper;
         private readonly ILogger<UpdateBipperCommandHandler> _logger;
+        private readonly IBipperAuthorizationService _bipperAuthorizationService;
+        private readonly IClientRepository _clientRepository;
 
-        public UpdateBipperCommandHandler(IBipperRepository bipperRepository, IRestaurantRepository restaurantRepository, IRestaurantAuthorizationService authorizationService, IUserContext userContext, IMapper mapper, ILogger<UpdateBipperCommandHandler> logger)
+        public UpdateBipperCommandHandler(IBipperRepository bipperRepository, IRestaurantRepository restaurantRepository, IRestaurantAuthorizationService authorizationService, IUserContext userContext, IMapper mapper, ILogger<UpdateBipperCommandHandler> logger, IBipperAuthorizationService bipperAuthorizationService, IClientRepository clientRepository)
         {
             _bipperRepository = bipperRepository;
             _restaurantRepository = restaurantRepository;
@@ -35,13 +38,15 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
             _userContext = userContext;
             _mapper = mapper;
             _logger = logger;
+            _bipperAuthorizationService = bipperAuthorizationService;
+            _clientRepository = clientRepository;
         }
 
         public async Task<BipperDTO> Handle(UpdateBipperCommand request, CancellationToken cancellationToken)
         {
 
             var currentUser = _userContext.GetCurrentUser();
-            EnsureIsAuthenticated(currentUser);
+            _bipperAuthorizationService.EnsureIsAuthenticated(currentUser);
 
             var restaurant = await _restaurantRepository.GetByIdAsync(request.RestaurantId);
 
@@ -51,6 +56,14 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
 
             }
 
+            var client = await _clientRepository.FindByIdAsync(request.ClientId);
+
+            if (client == null)
+            {
+                throw new NotFoundException(nameof(Client), request.RestaurantId.ToString());
+            }
+
+
             var bipperToUpdate = await _bipperRepository.FindByIdAsync(request.Id);
 
             if (bipperToUpdate == null)
@@ -59,8 +72,9 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
             }
 
 
-            EnsureValidResource(restaurant);
-            EnsureBipperBelongsToRestaurant(bipperToUpdate, restaurant);
+            _bipperAuthorizationService.EnsureValidResource(restaurant,ResourceOperation.Update);
+            _bipperAuthorizationService.EnsureBipperBelongsToRestaurant(restaurant,bipperToUpdate);
+            _bipperAuthorizationService.EnsureBipperBelongsToClient(client, bipperToUpdate);
 
 
             _mapper.Map(request, bipperToUpdate);
@@ -73,29 +87,5 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
 
         }
 
-
-        private void EnsureIsAuthenticated(CurrentUser? user)
-        {
-            if (user == null)
-            {
-                throw new InvalidOperationException("User Unauthenticated");
-            }
-        }
-
-        private void EnsureValidResource(Restaurant restaurant)
-        {
-            if (!_authorizationService.Authorize(restaurant, ResourceOperation.Update))
-            {
-                throw new ForbidException();
-            }
-        }
-
-        private void EnsureBipperBelongsToRestaurant(Bipper bipper, Restaurant restaurant)
-        {
-            if (bipper.RestaurantId != restaurant.Id)
-            {
-                throw new ForbidException();
-            }
-        }
     }
 }

@@ -32,8 +32,16 @@ namespace Restaurants.Infrastructure.Repositories
         {
 
             var client = await _restaurantsDbContext.Clients.FirstOrDefaultAsync(c => c.Email == email);
+
             return client;
 
+        }
+
+        public async Task<Client?> FindByIdAsync(int id)
+        {
+            var client = await _restaurantsDbContext.Clients.FirstOrDefaultAsync(c => c.Id == id);
+
+            return client;
         }
     }
 }

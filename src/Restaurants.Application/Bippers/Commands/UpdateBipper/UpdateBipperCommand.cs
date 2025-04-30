@@ -13,6 +13,7 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
     public class UpdateBipperCommand : IRequest<BipperDTO>
     {
         public Guid Id { get; set; }
+        public int ClientId { get; set; }
         public int RestaurantId { get; set; }
         public bool? IsReady { get; set; }
         public BipperStatus? Status { get; set; }

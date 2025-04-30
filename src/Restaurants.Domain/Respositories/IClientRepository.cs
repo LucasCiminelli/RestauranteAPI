@@ -12,6 +12,7 @@ namespace Restaurants.Domain.Respositories
 
         Task<Client> CreateAsync(Client client);
         Task<Client?> FindByEmailAsync(string email);
+        Task<Client?> FindByIdAsync(int id);    
 
 
     }
