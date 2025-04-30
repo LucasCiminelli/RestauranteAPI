@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Restaurants.Application.Bippers.Commands.CreateBipper;
 using Restaurants.Application.Bippers.Commands.UpdateBipper;
 using Restaurants.Domain.Entities;
 using System;
@@ -15,7 +16,9 @@ namespace Restaurants.Application.Bippers.Dtos
         {
 
             CreateMap<UpdateBipperCommand, Bipper>();
+            CreateMap<CreateBipperCommand, Bipper>();
 
+            CreateMap<Bipper, BipperDTO>();
 
 
 

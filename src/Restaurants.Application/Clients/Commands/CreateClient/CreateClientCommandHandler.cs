@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Restaurants.Application.Clients.Dtos;
 using Restaurants.Application.Users;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Restaurants.Application.Clients.Commands.CreateClient
 {
-    public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, Client>
+    public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, ClientDTO>
     {
 
         private readonly IClientRepository _clientRepository;
@@ -29,7 +30,7 @@ namespace Restaurants.Application.Clients.Commands.CreateClient
             _userContext = context;
         }
 
-        public async Task<Client> Handle(CreateClientCommand request, CancellationToken cancellationToken)
+        public async Task<ClientDTO> Handle(CreateClientCommand request, CancellationToken cancellationToken)
         {
             var currentUser = _userContext.GetCurrentUser();
 
@@ -45,23 +46,26 @@ namespace Restaurants.Application.Clients.Commands.CreateClient
             if (existingClient != null)
             {
                 _logger.LogInformation("El cliente con el email {Email} ya existe en la base de datos", existingClient.Email);
-                throw new InvalidOperationException("El cliente ya existe en la base de datos");
+                throw new InvalidOperationException("The client already exists");
             }
 
             _logger.LogInformation("Creando un nuevo usuario con la siguiente información: {Request}", request);
 
-            var newClient = new Client
-            {
-                Nombre = request.Nombre,
-                Apellido = request.Apellido,
-                Phone = request.Phone,
-                Email = request.Email,
-            };
+            //var newClient = new Client
+            //{
+            //    Nombre = request.Nombre,
+            //    Apellido = request.Apellido,
+            //    Phone = request.Phone,
+            //    Email = request.Email,
+            //};
 
+            var newClient = _mapper.Map<Client>(request);
             await _clientRepository.CreateAsync(newClient);
 
 
-            return newClient;
+            var clientDTO = _mapper.Map<ClientDTO>(newClient);
+
+            return clientDTO;
         }
     }
 }
