@@ -35,8 +35,9 @@ namespace Restaurants.Infrastructure.Persistence
 
             modelBuilder.Entity<Restaurant>()
                .HasMany(r => r.Bippers)
-               .WithOne()
-               .HasForeignKey(b => b.RestaurantId);
+               .WithOne(b => b.Restaurant)
+               .HasForeignKey(b => b.RestaurantId)
+               .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<User>()
                 .HasMany(o => o.OwnedRestaraunts)
@@ -46,7 +47,8 @@ namespace Restaurants.Infrastructure.Persistence
             modelBuilder.Entity<Client>()
               .HasMany(c => c.Bippers)
               .WithOne(b => b.Client)
-              .HasForeignKey(b => b.ClientId);
+              .HasForeignKey(b => b.ClientId)
+              .OnDelete(DeleteBehavior.Cascade);
         }
 
     }
