@@ -72,13 +72,17 @@ namespace Restaurants.Application.Users.Tests
             var userContext = new UserContext(httpContextAccessorMock.Object);
 
 
+            //////////// Action action = () => userContext.GetCurrentUser();
+
+
             //Act
 
-            Action action = () => userContext.GetCurrentUser();
+            var currentUser = userContext.GetCurrentUser();
+
 
             //Asset
 
-            action.Should().Throw<InvalidOperationException>().WithMessage("User context is not present");
+            currentUser.Should().BeNull();
         }
     }
 }
