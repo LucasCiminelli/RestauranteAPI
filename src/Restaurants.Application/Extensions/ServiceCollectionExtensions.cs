@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurants.Application.Common.Interfaces;
+using Restaurants.Application.Common.Services;
 using Restaurants.Application.Restaurants;
 using Restaurants.Application.Users;
 using Restaurants.Domain.Respositories;
@@ -29,11 +31,10 @@ namespace Restaurants.Application.Extensions
                 .AddFluentValidationAutoValidation();
 
             services.AddScoped<IUserContext, UserContext>();
+            services.AddScoped<IBipperAuthorizationService, BipperAuthorizationService>();
             services.AddHttpContextAccessor();
 
         }
-
-
 
     }
 }
