@@ -17,6 +17,7 @@ using Restaurants.Domain.Constants;
 using FluentAssertions;
 using Restaurants.Application.Bippers.Dtos;
 using System.Reflection.Metadata;
+using Restaurants.Domain.Exceptions;
 
 namespace Restaurants.Application.Bippers.Commands.CreateBipper.Tests
 {
@@ -94,7 +95,6 @@ namespace Restaurants.Application.Bippers.Commands.CreateBipper.Tests
 
         }
 
-
         [Fact()]
         public async Task CreateBipper_WithNullCurrentUser_ReturnsInvalidOperationException()
         {
@@ -129,6 +129,43 @@ namespace Restaurants.Application.Bippers.Commands.CreateBipper.Tests
             await act.Should().ThrowAsync<InvalidOperationException>();
         }
 
+        [Fact()]
+        public async Task CreateBipper_WithNonExistingRestaurant_ReturnsNotFoundException()
+        {
+            var restaurantId = 1;
+            var restaurant = new Restaurant { Id = restaurantId };
+            var currentUser = new CurrentUser("owner-id", "test@test.com", [], null, null);
+            var client = new Client { Id = 1 };
+            var bipper = new Bipper { RestaurantId = restaurantId };
 
+            var command = new CreateBipperCommand { RestaurantId = restaurantId, ClientId = 1 };
+
+            _clientRepositoryMock.Setup(c => c.FindByIdAsync(1)).ReturnsAsync(client);
+            _restaurantRepositoryMock.Setup(r => r.GetByIdAsync(restaurantId)).ReturnsAsync((Restaurant)null!);
+
+            Func<Task> act = async () => await _handler.Handle(command, CancellationToken.None);
+
+            await act.Should().ThrowAsync<NotFoundException>();
+
+        }
+
+        [Fact()]
+        public async Task CreateBipper_WithNonExistingClient_ReturnsNotFoundException()
+        {
+            var restaurantId = 1;
+            var restaurant = new Restaurant { Id = restaurantId };
+            var currentUser = new CurrentUser("owner-id", "test@test.com", [], null, null);
+            var client = new Client { Id = 1 };
+            var bipper = new Bipper { RestaurantId = restaurantId };
+
+            var command = new CreateBipperCommand { RestaurantId = restaurantId, ClientId = 1 };
+
+            _clientRepositoryMock.Setup(c => c.FindByIdAsync(1)).ReturnsAsync((Client)null!);
+
+            Func<Task> act = async () => await _handler.Handle(command, CancellationToken.None);
+
+            await act.Should().ThrowAsync<NotFoundException>();
+
+        }
     }
 }
