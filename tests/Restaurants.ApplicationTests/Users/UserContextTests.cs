@@ -62,7 +62,7 @@ namespace Restaurants.Application.Users.Tests
         }
 
         [Fact()]
-        public void GetCurrentUser_WithUserContextIsNull_ThrowsInvalidOperationException()
+        public void GetCurrentUser_WithUserContextIsNull_ShouldReturnNull()
         {
             //Arrange
 

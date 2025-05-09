@@ -22,8 +22,9 @@ namespace Restaurants.Application.Bippers.Commands.CreateBipper
 
             RuleFor(b => b.Type)
                 .IsInEnum()
-                .WithMessage("El tipo de Bipper es inválido");
-
+                .WithMessage("El tipo de Bipper es inválido")
+                .NotNull();
+                    
 
         }
     }
