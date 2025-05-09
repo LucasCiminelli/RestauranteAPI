@@ -23,18 +23,16 @@ namespace Restaurants.Application.Bippers.Commands.UpdateBipper
 
         private readonly IBipperRepository _bipperRepository;
         private readonly IRestaurantRepository _restaurantRepository;
-        private readonly IRestaurantAuthorizationService _authorizationService;
         private readonly IUserContext _userContext;
         private readonly IMapper _mapper;
         private readonly ILogger<UpdateBipperCommandHandler> _logger;
         private readonly IBipperAuthorizationService _bipperAuthorizationService;
         private readonly IClientRepository _clientRepository;
 
-        public UpdateBipperCommandHandler(IBipperRepository bipperRepository, IRestaurantRepository restaurantRepository, IRestaurantAuthorizationService authorizationService, IUserContext userContext, IMapper mapper, ILogger<UpdateBipperCommandHandler> logger, IBipperAuthorizationService bipperAuthorizationService, IClientRepository clientRepository)
+        public UpdateBipperCommandHandler(IBipperRepository bipperRepository, IRestaurantRepository restaurantRepository, IUserContext userContext, IMapper mapper, ILogger<UpdateBipperCommandHandler> logger, IBipperAuthorizationService bipperAuthorizationService, IClientRepository clientRepository)
         {
             _bipperRepository = bipperRepository;
             _restaurantRepository = restaurantRepository;
-            _authorizationService = authorizationService;
             _userContext = userContext;
             _mapper = mapper;
             _logger = logger;
